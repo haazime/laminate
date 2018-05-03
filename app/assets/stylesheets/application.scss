@@ -8,7 +8,17 @@
 @import 'site_wide';
 @import 'product_backlog';
 
+.nav-Global {
+  background-color: rgba(255,255,255,.9) !important;
+  border-bottom: 1px solid lighten($app-color-shadow, 10%);
+}
+
+.nav-Global_AppName {
+  color: $app-color-primary !important;
+  font-weight: bold;
+}
+
 body {
-  padding-top: 3rem;
+  padding-top: calc(56px + 1.5rem);
   padding-bottom: 3rem;
 }
