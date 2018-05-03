@@ -1,0 +1,65 @@
+<% items = [
+  {
+    id: 10,
+    content: %w(ユーザーとして プロダクトバックログアイテムを追加したい それは、プロダクトのアイデアを記録したいから),
+    point: 5
+  },
+  {
+    id: 11,
+    content: %w(ユーザーとして プロダクトバックログアイテムの優先順位を入れ替えたい それは、効率的にプロダクトを開発から),
+    point: 8
+  },
+  {
+    id: 12,
+    content: %w(ユーザー登録),
+    point: 8
+  },
+  {
+    id: 13,
+    content: %w(ログイン),
+    point: 13
+  },
+] %>
+<div class="row">
+  <div class="col-lg-10 mx-auto">
+    <div class="sw-Sheet">
+      <div class="pbl-Container">
+        <div class="pbl-Header">
+          <div class="pbl-Header_Title">
+            <h1 class="pbl-Title">
+              プロダクトバックログ
+            </h1>
+          </div>
+          <div class="pbl-Header_Actions">
+            <%= link_to '', class: 'btn btn-outline-success' do -%>
+              <i class="fa fa-plus-circle"></i>
+              追加する
+            <% end -%>
+          </div>
+        </div>
+        <div class="pbl-List">
+          <% items.each do |i| -%>
+            <div class="pbl-Item">
+              <div class="pbl-Item_Header">
+                <i class="pbl-Item_Handle"></i>
+              </div>
+              <div class="pbl-Item_Body">
+                <span class="pbl-Item_Id">
+                  #<%= i[:id] %>
+                </span>
+                <p class="pbl-Item_Content">
+                  <%= i[:content].join('<br>').html_safe %>
+                </p>
+              </div>
+              <div class="pbl-Item_Tail">
+                <div class="pbl-Item_Amount">
+                  <%= i[:point] %>
+                </div>
+              </div>
+            </div>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

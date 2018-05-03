@@ -2,3 +2,13 @@
 @import 'bootstrap/functions';
 @import 'bootstrap_variables';
 @import 'bootstrap';
+
+@import 'font-awesome';
+@import 'mixins';
+@import 'site_wide';
+@import 'product_backlog';
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
