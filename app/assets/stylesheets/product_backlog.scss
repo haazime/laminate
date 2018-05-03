@@ -1,12 +1,12 @@
 .pbl-Container {
-  padding: 1rem 2.5rem;
+  padding: 0 0 1rem;
 }
 
 .pbl-Header {
   @extend .d-flex, .align-items-center;
+  margin: 0 2rem;
+  padding: .75rem 0;
   border-bottom: 1px solid $app-color-shadow;
-  padding: .25rem 0 .75rem;
-  margin-bottom: 1rem;
 }
 
 .pbl-Title {
@@ -18,12 +18,12 @@
 };
 
 .pbl-List {
-  padding-bottom: 1rem;
+  padding: .5rem 3rem;
 }
 
 .pbl-Item {
   @extend .d-flex;
-  padding: 1rem 0;
+  padding: .75rem 0;
   border-bottom: 1px solid $app-color-gray1;
 
   &:last-child {
