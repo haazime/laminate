@@ -6,7 +6,13 @@
 @import 'font-awesome';
 @import 'mixins';
 @import 'site_wide';
+@import 'form';
 @import 'product_backlog';
+@import 'product_backlog_item';
+
+.nav-link {
+  text-decoration: none;
+}
 
 .nav-Global {
   background-color: rgba(255,255,255,.9) !important;
@@ -16,6 +22,11 @@
 .nav-Global_AppName {
   color: $app-color-primary !important;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.btn {
+  text-decoration: none;
 }
 
 body {

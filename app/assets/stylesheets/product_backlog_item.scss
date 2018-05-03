@@ -1,0 +1,18 @@
+.pbi-New_Container {
+  padding: 0 0 1rem;
+}
+
+.pbi-New_Header {
+  @extend .d-flex, .align-items-center;
+  margin: 0 2rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid $app-color-shadow;
+}
+
+.pbi-New_Title {
+  @include heading;
+}
+
+.pbi-New_FormWrapper {
+  padding: 1rem 3.5rem;
+}
