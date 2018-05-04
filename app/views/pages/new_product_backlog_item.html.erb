@@ -13,50 +13,46 @@
 </div>
 <div class="row">
   <div class="col-lg-8 mx-auto">
-    <div class="sw-Sheet">
-      <div class="pbi-New_Container">
-        <div class="pbi-New_Header">
-          <div class="pbi-New_HeaderTitle">
-            <h1 class="pbi-New_Title">
-              新しいプロダクトバックログアイテム
-            </h1>
-          </div>
-        </div>
-        <div class="pbi-New_FormWrapper">
-          <form>
-            <div class="form-group">
-              <label>
-                内容
-              </label>
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
-            <div class="form-group">
-              <label>
-                詳細
-              </label>
-              <textarea class="form-control" rows="5"></textarea>
-            </div>
+    <div class="st-Content">
+      <div class="st-Content_Header-mb">
+        <h1 class="pbi-New_Title">
+          新しいプロダクトバックログアイテム
+        </h1>
+      </div>
+      <div class="st-Content_Body">
+        <form>
+          <div class="form-group">
             <label>
-              大きさ
+              内容
             </label>
-            <div class="form-group">
-              <% [1,2,3,5,8,13,21].each do |p| -%>
-                <% id = "amount#{p}" %>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="amount" id="<%= id %>" value="<%= p %>">
-                  <label class="form-check-label frm-Check_Label" for="<%= id %>"><%= p %></label>
-                </div>
-              <% end -%>
-            </div>
-            <div class="frm-Actions">
-              <button type="submit" class="btn btn-success">
-                <i class="fa fa-plus"></i>
-                追加する
-              </button>
-              <%= link_to 'キャンセル', page_url(:product_backlog), class: 'frm-Action_Cancel' %>
-            </div>
-          </form>
-        </div>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label>
+              詳細
+            </label>
+            <textarea class="form-control" rows="5"></textarea>
+          </div>
+          <label>
+            大きさ
+          </label>
+          <div class="form-group">
+            <% [1,2,3,5,8,13,21].each do |p| -%>
+              <% id = "amount#{p}" %>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="amount" id="<%= id %>" value="<%= p %>">
+                <label class="form-check-label frm-Check_Label" for="<%= id %>"><%= p %></label>
+              </div>
+            <% end -%>
+          </div>
+          <div class="frm-Actions">
+            <button type="submit" class="btn btn-success">
+              <i class="fa fa-plus"></i>
+              追加する
+            </button>
+            <%= link_to 'キャンセル', page_url(:product_backlog), class: 'frm-Action_Cancel' %>
+          </div>
+        </form>
       </div>
     </div>
   </div>

@@ -1,0 +1,22 @@
+.st-Content {
+  @extend .sw-Sheet;
+  padding: 0 0 2rem;
+}
+
+.st-Content_Header {
+  @mixin base {
+    @extend .d-flex;
+    padding: 1rem 1.5rem 0;
+    margin-bottom: .5rem;
+  }
+  @include base;
+
+  &-mb {
+    @include base;
+    margin-bottom: 1rem;
+  }
+}
+
+.st-Content_Body {
+  padding: 0 3.5rem;
+}
