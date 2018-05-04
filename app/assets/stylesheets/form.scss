@@ -1,18 +1,23 @@
-input, textarea {
+input,
+textarea {
   @include nf;
 }
 
 label {
   @include nf;
   font-weight: bold;
-  font-size: .875rem;
+  font-size: $app-font-size;
   color: $app-color-subtext;
+}
+
+.btn {
+  text-decoration: none;
 }
 
 .frm-Check_Label {
   color: $app-color-text;
   font-weight: normal;
-  font-size: $font-size-base;
+  font-size: $app-font-size-lg;
 }
 
 .frm-Actions {

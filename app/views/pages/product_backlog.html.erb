@@ -21,6 +21,17 @@
   },
 ] %>
 <div class="row">
+  <div class="col-lg-12 mx-auto">
+    <div class="breadcrumbs">
+      <%= link_to 'プロジェクトホーム', '', class: '' -%>
+      <i class="fa fa-angle-right"></i>
+      <span>
+        プロダクトバックログ
+      </span>
+    </div>
+  </div>
+</div>
+<div class="row">
   <div class="col-lg-10 mx-auto">
     <div class="sw-Sheet">
       <div class="pbl-Container">
@@ -31,8 +42,8 @@
             </h1>
           </div>
           <div class="pbl-Header_Actions">
-            <%= link_to page_url(:new_product_backlog_item), class: 'btn btn-outline-success' do -%>
-              <i class="fa fa-plus-circle"></i>
+            <%= link_to page_url(:new_product_backlog_item), class: 'btn btn-sm btn-success' do -%>
+              <i class="fa fa-plus"></i>
               追加する
             <% end -%>
           </div>
