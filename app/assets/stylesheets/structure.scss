@@ -1,6 +1,14 @@
 .st-Content {
-  @extend .sw-Sheet;
-  padding: 0 0 2rem;
+  @mixin base {
+    @extend .sw-Sheet;
+    padding: 0 0 2rem;
+  }
+  @include base;
+
+  &-mt {
+    @include base;
+    margin-top: 1.5rem;
+  }
 }
 
 .st-Content_Header {

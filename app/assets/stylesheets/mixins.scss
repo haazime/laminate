@@ -13,6 +13,16 @@
   content: $content;
 }
 
+@mixin xul($color: $link-color, $hover-color: $link-hover-color) {
+  text-decoration: none;
+  color: $color;
+
+  &:hover {
+    text-decoration: underline;
+    color: $color;
+  }
+}
+
 @mixin avatar($size) {
   display: inline-block;
   vertical-align: middle;
