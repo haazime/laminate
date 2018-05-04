@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="breadcrumbs">
+    <%= link_to 'プロジェクトホーム', '' -%>
+    <span class="current">
+      プロダクトバックログ
+    </span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-10 mx-auto">
+    <div class="st-Content">
+      <div class="st-Content_Header">
+        <div class="pbl-Header_Title">
+          <h1 class="pbl-Title">
+            プロダクトバックログ
+          </h1>
+        </div>
+        <div class="pbl-Header_Actions">
+          <%= link_to page_url(:new_product_backlog_item), class: 'btn btn-sm btn-success' do -%>
+            <i class="fa fa-plus"></i>
+            追加する
+          <% end -%>
+        </div>
+      </div>
+      <div class="st-Content_Body">
+        <div class="sw-BlankSlate">
+          <p class="sw-BlankSlate_Body">
+            まだプロダクトバックログアイテムはありません。
+          </p>
+          <% 5.times do %>
+            <%= image_tag 'blank_pbi.svg' %>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

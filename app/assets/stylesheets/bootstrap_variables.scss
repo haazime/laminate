@@ -64,7 +64,7 @@ $colors: map-merge((
 
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
-$success:       $green !default;
+$success:       $app-color-green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
@@ -148,7 +148,8 @@ $body-color:                $app-color-text;
 // Style anchor elements.
 
 $link-color:                theme-color("primary") !default;
-$link-decoration:           none !default;
+$link-decoration:           underline !default;
+//$link-decoration:           none !default;
 $link-hover-color:          darken($link-color, 15%) !default;
 $link-hover-decoration:     underline !default;
 
@@ -226,7 +227,7 @@ $transition-collapse:         height .35s ease !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:      'Rounded Mplus 1c', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -345,12 +346,15 @@ $input-btn-border-width:      $border-width !default;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               $input-btn-padding-x !default;
+//$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-y:               .25rem !default;
+$btn-padding-x:               1rem !default;
+//$btn-padding-x:               $input-btn-padding-x !default;
 $btn-line-height:             $input-btn-line-height !default;
 
 $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
-$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+//$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+$btn-padding-x-sm:            .75rem !default;
 $btn-line-height-sm:          $input-btn-line-height-sm !default;
 
 $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
@@ -397,7 +401,8 @@ $input-disabled-bg:                     $gray-200 !default;
 
 $input-color:                           $gray-700 !default;
 $input-border-color:                    $gray-400 !default;
-$input-border-width:                    $input-btn-border-width !default;
+//$input-border-width:                    $input-btn-border-width !default;
+$input-border-width:                    2px !default;
 $input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;
 
 $input-border-radius:                   $border-radius !default;
@@ -548,8 +553,10 @@ $dropdown-link-active-bg:           $component-active-bg !default;
 
 $dropdown-link-disabled-color:      $gray-600 !default;
 
-$dropdown-item-padding-y:           .25rem !default;
-$dropdown-item-padding-x:           1.5rem !default;
+$dropdown-item-padding-y:           .125rem !default;
+//$dropdown-item-padding-y:           .25rem !default;
+$dropdown-item-padding-x:           .75rem !default;
+//$dropdown-item-padding-x:           1.5rem !default;
 
 $dropdown-header-color:             $gray-600 !default;
 
@@ -587,12 +594,14 @@ $nav-pills-link-active-bg:          $component-active-bg !default;
 
 // Navbar
 
-$navbar-padding-y:                  ($spacer / 2) !default;
+//$navbar-padding-y:                  ($spacer / 2) !default;
+$navbar-padding-y:                  ($spacer / 8) !default;
 $navbar-padding-x:                  $spacer !default;
 
 $navbar-nav-link-padding-x:         .5rem !default;
 
-$navbar-brand-font-size:            $font-size-lg !default;
+//$navbar-brand-font-size:            $font-size-lg !default;
+$navbar-brand-font-size:            $font-size-base !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height:                   ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
 $navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;

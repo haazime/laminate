@@ -52,6 +52,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'popper_js', '~> 1.12.9'
+gem 'font-awesome-rails'
 
 source 'https://rails-assets.org' do
 end

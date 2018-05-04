@@ -1,0 +1,43 @@
+.nav-link,
+.dropdown-item {
+  font-size: $app-font-size;
+  text-decoration: none;
+}
+
+.dropdown-divider {
+  //margin: .125rem 0;
+}
+
+.nav-Global {
+  background-color: rgba(255,255,255,.9) !important;
+  border-bottom: 1px solid lighten($app-color-shadow, 10%);
+}
+
+.nav-Global_AppName {
+  color: $app-color-primary !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.breadcrumbs {
+  @include nf;
+  display: inline-block;
+  font-size: $app-font-size-sm;
+  margin: .25rem auto .75rem;
+
+  a {
+    &:after {
+      @include fa-content('\f105');
+      display: inline-block;
+      color: $app-color-gray3;
+      margin: 0 .5rem;
+    }
+  }
+
+  .current {
+    background-color: $app-color-gray3;
+    color: #FFF;
+    padding: .25rem .675rem;
+    border-radius: 1rem;
+  }
+}

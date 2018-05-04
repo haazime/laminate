@@ -1,0 +1,61 @@
+.pbl-Title {
+  @include heading;
+}
+
+.pbl-Header_Actions {
+  @extend .ml-auto;
+};
+
+.pbl-Item {
+  @extend .d-flex;
+  padding: .75rem 0;
+  border-bottom: 1px solid $app-color-gray1;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.pbl-Item_Header {
+  @extend .d-flex, .align-items-center;
+  margin-right: 1.25rem;
+}
+
+.pbl-Item_Handle {
+  @extend .fa, .fa-bars;
+  font-size: 1.25rem;
+  color: $app-color-gray2;
+}
+
+.pbl-Item_Body {
+  @extend .d-flex, .flex-column;
+}
+
+.pbl-Item_Id {
+  @include nf;
+  font-size: $app-font-size;
+  font-weight: bold;
+  color: $app-color-subtext;
+}
+
+.pbl-Item_Content {
+  @include nf;
+  margin: .25rem 0 0;
+  line-height: 1.125rem;
+  font-size: $app-font-size;
+}
+
+.pbl-Item_Tail {
+  @extend .ml-auto, .d-flex, .align-items-center;
+}
+
+.pbl-Item_Amount {
+  @include nf;
+  background-color: darken($app-color-blue, 5%);
+  color: lighten($app-color-blue, 30%);
+  font-weight: bold;
+  border-radius: 50%;
+  width: 1.875rem;
+  font-size: 1.25rem;
+  text-align: center;
+}

@@ -1,0 +1,36 @@
+input,
+textarea {
+  @include nf;
+}
+
+label {
+  @include nf;
+  font-weight: bold;
+  font-size: $app-font-size;
+  color: $app-color-subtext;
+}
+
+.btn {
+  text-decoration: none;
+}
+
+.frm-Check_Label {
+  color: $app-color-text;
+  font-weight: normal;
+  font-size: $app-font-size-lg;
+}
+
+.frm-Actions {
+  @extend .d-flex, .align-items-center;
+  margin-top: 1.75rem;
+}
+
+.frm-Action_Cancel {
+  color: lighten($app-color-gray3, 15%);
+  margin-left: 1.5rem;
+  font-weight: bold;
+
+  &:hover {
+    color: $app-color-gray3;
+  }
+}
