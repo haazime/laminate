@@ -1,5 +1,11 @@
-.nav-link {
+.nav-link,
+.dropdown-item {
+  font-size: $app-font-size;
   text-decoration: none;
+}
+
+.dropdown-divider {
+  //margin: .125rem 0;
 }
 
 .nav-Global {

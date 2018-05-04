@@ -1,0 +1,7 @@
+.usr-Avatar {
+  @include avatar(1.75rem);
+}
+
+.usr-Name {
+  @include nf;
+}
