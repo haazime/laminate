@@ -1,12 +1,8 @@
 .st-Content {
-  @mixin base {
-    @extend .sw-Sheet;
-    padding: 0 0 2rem;
-  }
-  @include base;
+  @extend .sw-Sheet;
+  padding: 0 0 2rem;
 
   &-mt {
-    @include base;
     margin-top: 1.5rem;
   }
 }
@@ -28,13 +24,5 @@
 }
 
 .st-Content_Body {
-  @mixin base {
-    padding: 0 3.25rem;
-  }
-  @include base;
-
-  &-mt {
-    @include base;
-    padding-top: 2rem;
-  }
+  padding: 0 3.25rem;
 }

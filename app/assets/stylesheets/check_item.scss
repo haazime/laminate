@@ -8,20 +8,21 @@
 }
 
 .chk-Item_Mark {
-  @extend .fa, .fa-circle-thin;
+  @extend .fa;
   font-size: 2rem;
   color: $app-color-gray2;
 
+  &-ready {
+    @extend .fa-circle-thin;
+  }
+
   &-checked {
-    @extend .fa, .fa-check-circle;
-    font-size: 2rem;
+    @extend .fa-check-circle;
     color: $app-color-green;
   }
 
   &-disabled {
-    @extend .fa, .fa-minus-circle;
-    font-size: 2rem;
-    color: $app-color-gray2;
+    @extend .fa-minus-circle;
   }
 }
 
