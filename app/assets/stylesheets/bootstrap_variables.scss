@@ -62,7 +62,7 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $blue !default;
+$primary:       $app-color-primary !default;
 $secondary:     $gray-600 !default;
 $success:       $app-color-green !default;
 $info:          $cyan !default;
@@ -352,9 +352,10 @@ $btn-padding-x:               1rem !default;
 //$btn-padding-x:               $input-btn-padding-x !default;
 $btn-line-height:             $input-btn-line-height !default;
 
-$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+//$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+$btn-padding-y-sm:            0 !default;
 //$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
-$btn-padding-x-sm:            .75rem !default;
+$btn-padding-x-sm:            1rem !default;
 $btn-line-height-sm:          $input-btn-line-height-sm !default;
 
 $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
@@ -538,8 +539,10 @@ $dropdown-min-width:                10rem !default;
 $dropdown-padding-y:                .5rem !default;
 $dropdown-spacer:                   .125rem !default;
 $dropdown-bg:                       $white !default;
-$dropdown-border-color:             rgba($black, .15) !default;
-$dropdown-border-radius:            $border-radius !default;
+$dropdown-border-color:             $app-color-gray1 !default;
+//$dropdown-border-color:             rgba($black, .15) !default;
+$dropdown-border-radius:            0 !default;
+//$dropdown-border-radius:            $border-radius !default;
 $dropdown-border-width:             $border-width !default;
 $dropdown-divider-bg:               $gray-200 !default;
 $dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175) !default;

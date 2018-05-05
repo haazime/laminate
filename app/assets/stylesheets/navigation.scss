@@ -4,13 +4,9 @@
   text-decoration: none;
 }
 
-.dropdown-divider {
-  //margin: .125rem 0;
-}
-
 .nav-Global {
   background-color: rgba(255,255,255,.9) !important;
-  border-bottom: 1px solid lighten($app-color-shadow, 10%);
+  border-bottom: 1px solid $app-color-gray1;
 }
 
 .nav-Global_AppName {
@@ -27,15 +23,15 @@
 
   a {
     &:after {
-      @include fa-content('\f105');
+      @include fa-content('\f138');
       display: inline-block;
-      color: $app-color-gray3;
+      color: $app-color-gray4;
       margin: 0 .5rem;
     }
   }
 
   .current {
-    background-color: $app-color-gray3;
+    background-color: $app-color-gray5;
     color: #FFF;
     padding: .25rem .675rem;
     border-radius: 1rem;

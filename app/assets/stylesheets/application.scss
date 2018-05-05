@@ -11,22 +11,7 @@
 @import 'navigation';
 @import 'user';
 @import 'product_backlog';
-@import 'product_backlog_item';
-
-.sw-BlankSlate {
-  position: relative;
-}
-.sw-BlankSlate_Body {
-  @include nf;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 75%;
-  padding: 1rem;
-  background: rgba(80,80,50,0.7);
-  color: #FFF;
-}
+@import 'project';
 
 body {
   padding-top: calc(56px + 1rem);
