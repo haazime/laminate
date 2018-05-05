@@ -31,7 +31,7 @@
 
 .pbl-Item_Content {
   @include nf;
-  @include xul($app-color-text);
+  @include xul($app-color-text, $app-color-text);
   margin: .25rem 0 0;
   line-height: 1.125rem;
   font-size: $app-font-size;
@@ -43,6 +43,5 @@
 
 .pbl-Item_Amount {
   @include circle(2rem);
-  background-color: darken($app-color-blue, 5%);
-  color: lighten($app-color-blue, 30%);
+  @include app-color-pbi-amount;
 }

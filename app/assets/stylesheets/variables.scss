@@ -14,6 +14,11 @@ $app-color-gray4: #60666c;
 $app-color-gray5: #3D454C;
 
 $app-color-primary: #714CA5;
-$app-color-blue: #63ABD8;
+$app-color-blue: #528CB1;
 $app-color-green: #4FA533;
 $app-color-red: #dc3545;
+
+@mixin app-color-pbi-amount {
+  background-color: lighten($app-color-primary, 35%);
+  color: darken($app-color-primary, 10%);
+}

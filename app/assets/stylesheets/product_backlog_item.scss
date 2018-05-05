@@ -49,8 +49,7 @@
 
 .pbi-Main_Amount {
   @include circle(2.5rem);
-  background-color: darken($app-color-blue, 5%);
-  color: lighten($app-color-blue, 30%);
+  @include app-color-pbi-amount;
 }
 
 .pbi-Sub_Header {
