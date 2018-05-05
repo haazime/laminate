@@ -1,0 +1,97 @@
+.pbi-Block {
+  padding: 2rem 3.25rem 1rem;
+  border-bottom: 1px solid $app-color-gray1;
+}
+
+.pbi-Block-Secondary {
+  padding: 1rem 3.25rem;
+  border-bottom: 1px solid $app-color-gray1;
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+.pbi-Main {
+  padding-bottom: 1rem;
+}
+
+.pbi-Main_Header {
+  @extend .d-flex, .align-items-start;
+  margin: 0 0 .5rem;
+}
+
+.pbi-Main_Id {
+  display: block;
+  color: $app-color-subtext;
+  font-weight: bold;
+}
+
+.pbi-Main_Edit {
+  @extend .ml-auto;
+  font-size: $app-font-size-sm;
+}
+
+.pbi-Main_Body {
+  @extend .d-flex, .align-items-center;
+}
+
+.pbi-Main_Content {
+  @include nf;
+  line-height: 1.25rem;
+  margin: 0;
+}
+
+.pbi-Main_AmountWrapper {
+  @extend .ml-auto;
+}
+
+.pbi-Main_Amount {
+  @include circle(2.5rem);
+  @include app-color-pbi-amount;
+}
+
+.pbi-Sub_Header {
+  @extend .d-flex, .align-items-center;
+  margin-bottom: .75rem;
+}
+
+.pbi-Sub_Title {
+  @include heading($app-font-size);
+  color: $app-color-subtext;
+}
+
+.pbi-Sub_Edit {
+  @extend .ml-auto;
+  font-size: $app-font-size-sm;
+}
+
+.pbi-Sub_Body {
+  margin: 0 0 0 1rem;
+}
+
+.pbi-Sub_Content {
+  @include nf;
+  font-size: $app-font-size;
+  margin: 0;
+}
+
+.pbi-AcceptanceCriterionForm {
+  margin-top: .75rem;
+}
+
+.pbi-Delete {
+  margin-top: .75rem;
+  text-align: right;
+}
+
+.pbi-Delete_Link {
+  @include xul($app-color-gray4, $app-color-gray5);
+  font-size: $app-font-size-sm;
+
+  &:before {
+    @include fa-content('\f014');
+    margin-right: .25rem;
+  }
+}

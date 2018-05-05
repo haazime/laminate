@@ -1,12 +1,8 @@
 .st-Content {
-  @mixin base {
-    @extend .sw-Sheet;
-    padding: 0 0 2rem;
-  }
-  @include base;
+  @extend .sw-Sheet;
+  padding: 0 0 2rem;
 
   &-mt {
-    @include base;
     margin-top: 1.5rem;
   }
 }
@@ -17,14 +13,9 @@
     padding: 2rem 0 .325rem;
     margin: 0 3rem;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid $app-color-gray5;
+    border-bottom: 1px solid $app-color-text;
   }
   @include base;
-
-  &-mb {
-    @include base;
-    margin-bottom: 2rem;
-  }
 }
 
 .st-Header_Actions {

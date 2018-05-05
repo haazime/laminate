@@ -1,0 +1,87 @@
+<div class="row">
+  <div class="breadcrumbs">
+    <%= link_to 'プロジェクトホーム', '' -%>
+    <%= link_to 'プロダクトバックログ', page_url(:product_backlog) -%>
+    <span class="current">
+      プロダクトバックログアイテム
+    </span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-10 mx-auto">
+    <div class="st-Content">
+      <div class="pbi-Block">
+        <div class="pbi-Main">
+          <div class="pbi-Main_Header">
+            <span class="pbi-Main_Id">
+              #123
+            </span>
+            <div class="pbi-Main_Edit">
+              <%= link_to '編集する', '', class: 'sw-Link-sm' %>
+            </div>
+          </div>
+          <div class="pbi-Main_Body">
+            <p class="pbi-Main_Content">
+              ユーザーとして<br>
+              プロダクトバックログアイテムの優先順位を入れ替えたい<br>
+              それは、効率的にプロダクトを開発から
+            </p>
+            <div class="pbi-Main_AmountWrapper">
+              <span class="pbi-Main_Amount">
+                13
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pbi-Block-Secondary">
+        <div class="pbi-Sub">
+          <div class="pbi-Sub_Header">
+            <h3 class="pbi-Sub_Title">
+              受け入れ基準:
+            </h3>
+          </div>
+          <div class="pbi-Sub_Body">
+            <% 3.times do %>
+              <div class="chk-Item">
+                <button class="chk-Item_Check">
+                  <i class="chk-Item_Mark chk-Item_Mark-disabled"></i>
+                </button>
+                <span class="chk-Item_Label">
+                  ドラッグ＆ドロップで入れ替えできること
+                </span>
+                <div class="chk-Item_Actions">
+                  <ul class="sw-HorizontalList">
+                    <li>
+                      <%= link_to '' do %>
+                        <i class="chk-Item_Delete"></i>
+                      <% end -%>
+                    </li>
+                    <li>
+                      <%= link_to '編集する', '' %>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            <% end -%>
+            <div class="pbi-AcceptanceCriterionForm">
+              <form>
+                <div class="input-group">
+                  <input type="text" class="form-control">
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-success">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pbi-Delete">
+      <%= link_to 'このプロダクトバックログアイテムを削除する', '', class: 'pbi-Delete_Link' %>
+    </div>
+  </div>
+</div>
