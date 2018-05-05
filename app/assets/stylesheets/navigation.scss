@@ -25,13 +25,13 @@
     &:after {
       @include fa-content('\f105');
       display: inline-block;
-      color: $app-color-gray3;
+      color: $app-color-gray5;
       margin: 0 .5rem;
     }
   }
 
   .current {
-    background-color: $app-color-gray3;
+    background-color: $app-color-gray5;
     color: #FFF;
     padding: .25rem .675rem;
     border-radius: 1rem;

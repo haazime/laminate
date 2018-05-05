@@ -26,11 +26,11 @@ label {
 }
 
 .frm-Action_Cancel {
-  color: lighten($app-color-gray3, 15%);
+  color: $app-color-gray3;
   margin-left: 1.5rem;
   font-weight: bold;
 
   &:hover {
-    color: $app-color-gray3;
+    color: $app-color-gray4;
   }
 }
