@@ -20,11 +20,6 @@
     border-bottom: 1px solid $app-color-text;
   }
   @include base;
-
-  &-mb {
-    @include base;
-    margin-bottom: 2rem;
-  }
 }
 
 .st-Header_Actions {
@@ -33,5 +28,13 @@
 }
 
 .st-Content_Body {
-  padding: 0 3.25rem;
+  @mixin base {
+    padding: 0 3.25rem;
+  }
+  @include base;
+
+  &-mt {
+    @include base;
+    padding-top: 2rem;
+  }
 }

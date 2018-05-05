@@ -1,0 +1,32 @@
+.chk-Item {
+  @extend .d-flex, .align-items-center;
+  margin-bottom: .25rem;
+}
+
+.chk-Item_Check {
+  @include icon-button;
+}
+
+.chk-Item_Mark {
+  @extend .fa, .fa-circle-thin;
+  font-size: 2rem;
+  color: $app-color-gray2;
+
+  &-checked {
+    @extend .fa, .fa-check-circle;
+    font-size: 2rem;
+    color: $app-color-green;
+  }
+
+  &-disabled {
+    @extend .fa, .fa-minus-circle;
+    font-size: 2rem;
+    color: $app-color-gray2;
+  }
+}
+
+.chk-Item_Label {
+  @include nf;
+  font-size: $app-font-size;
+  margin-left: .5rem;
+}

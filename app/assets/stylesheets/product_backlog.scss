@@ -24,7 +24,6 @@
 }
 
 .pbl-Item_Id {
-  @include nf;
   font-size: $app-font-size;
   font-weight: bold;
   color: $app-color-subtext;
@@ -32,6 +31,7 @@
 
 .pbl-Item_Content {
   @include nf;
+  @include xul($app-color-text);
   margin: .25rem 0 0;
   line-height: 1.125rem;
   font-size: $app-font-size;
@@ -42,12 +42,7 @@
 }
 
 .pbl-Item_Amount {
-  @include nf;
+  @include circle(2rem);
   background-color: darken($app-color-blue, 5%);
   color: lighten($app-color-blue, 30%);
-  font-weight: bold;
-  border-radius: 50%;
-  width: 1.875rem;
-  font-size: 1.25rem;
-  text-align: center;
 }
