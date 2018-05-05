@@ -8,7 +8,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-9 mx-auto">
+  <div class="col-lg-10 mx-auto">
     <div class="st-Content">
       <div class="pbi-Block">
         <div class="pbi-Main">
@@ -42,30 +42,28 @@
             </h3>
           </div>
           <div class="pbi-Sub_Body">
-            <div class="chk-Item">
-              <button class="chk-Item_Check">
-                <i class="chk-Item_Mark chk-Item_Mark-ready"></i>
-              </button>
-              <span class="chk-Item_Label">
-                ドラッグ＆ドロップで入れ替えできること
-              </span>
-            </div>
-            <div class="chk-Item">
-              <button class="chk-Item_Check">
-                <i class="chk-Item_Mark chk-Item_Mark-checked"></i>
-              </button>
-              <span class="chk-Item_Label">
-                ドラッグ＆ドロップで入れ替えできること
-              </span>
-            </div>
-            <div class="chk-Item">
-              <button class="chk-Item_Check">
-                <i class="chk-Item_Mark chk-Item_Mark-disabled"></i>
-              </button>
-              <span class="chk-Item_Label">
-                ドラッグ＆ドロップで入れ替えできること
-              </span>
-            </div>
+            <% 3.times do %>
+              <div class="chk-Item">
+                <button class="chk-Item_Check">
+                  <i class="chk-Item_Mark chk-Item_Mark-disabled"></i>
+                </button>
+                <span class="chk-Item_Label">
+                  ドラッグ＆ドロップで入れ替えできること
+                </span>
+                <div class="chk-Item_Actions">
+                  <ul class="sw-HorizontalList">
+                    <li>
+                      <%= link_to '' do %>
+                        <i class="chk-Item_Delete"></i>
+                      <% end -%>
+                    </li>
+                    <li>
+                      <%= link_to '編集する', '' %>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            <% end -%>
           </div>
         </div>
       </div>

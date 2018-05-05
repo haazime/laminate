@@ -31,3 +31,15 @@
   font-size: $app-font-size;
   margin-left: .5rem;
 }
+
+.chk-Item_Actions {
+  @extend .ml-auto;
+  font-size: $app-font-size-sm;
+  min-width: 6rem;
+  text-align: right;
+}
+
+.chk-Item_Delete {
+  @extend .fa, .fa-trash-o;
+  font-size: $app-font-size-lg;
+}
