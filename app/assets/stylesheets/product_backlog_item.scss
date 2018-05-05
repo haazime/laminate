@@ -81,3 +81,18 @@
 .pbi-AcceptanceCriterionForm {
   margin-top: .75rem;
 }
+
+.pbi-Delete {
+  margin-top: .75rem;
+  text-align: right;
+}
+
+.pbi-Delete_Link {
+  @include xul($app-color-gray4, $app-color-gray5);
+  font-size: $app-font-size-sm;
+
+  &:before {
+    @include fa-content('\f014');
+    margin-right: .25rem;
+  }
+}
