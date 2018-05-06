@@ -234,7 +234,8 @@ $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberati
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              $app-font-size !default; // Assumes the browser default, typically `16px`
+//$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                ($font-size-base * 1.25) !default;
 $font-size-sm:                ($font-size-base * .875) !default;
 
@@ -355,7 +356,7 @@ $btn-padding-x:               1rem !default;
 $btn-line-height:             $input-btn-line-height !default;
 
 //$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
-$btn-padding-y-sm:            0 !default;
+$btn-padding-y-sm:            .125rem !default;
 //$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
 $btn-padding-x-sm:            1rem !default;
 $btn-line-height-sm:          $input-btn-line-height-sm !default;

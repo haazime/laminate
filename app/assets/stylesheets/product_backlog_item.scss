@@ -24,6 +24,7 @@
 
 .pbi-Main_Id {
   display: block;
+  font-size: $app-font-size-lg;
   color: $app-color-subtext;
   font-weight: bold;
 }
@@ -39,6 +40,7 @@
 
 .pbi-Main_Content {
   @include nf;
+  font-size: $app-font-size-lg;
   line-height: 1.25rem;
   margin: 0;
 }
