@@ -23,12 +23,20 @@
   padding: 0 $app-space-x;
 }
 
-.st-BreakHeader {
-  @extend .d-flex, .align-items-center;
+.st-GroundBlock {
 }
 
-.st-BreakHeader_Line {
-  margin-left: .5rem;
-  border-bottom: 1px solid darken($app-color-gray1, 3%);
+.st-GroundBlock_Header {
+  @extend .d-flex, .align-items-center;
+  margin-bottom: 1rem;
+}
+
+.st-GroundBlock_Line {
   flex-grow: 1;
+  margin-left: .5rem;
+  border-bottom: 1px solid $app-color-shadow;
+}
+
+.st-GroundBlock_Body {
+  padding: 0 1.5rem;
 }

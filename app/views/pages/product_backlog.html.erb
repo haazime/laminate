@@ -14,40 +14,42 @@
 </div>
 <div class="row">
   <div class="col-lg-16 mx-auto">
-    <div class="st-BreakHeader">
-      <h1 class="sw-Content_Title">
-        プロダクトバックログ
-      </h1>
-      <span class="st-BreakHeader_Line"></span>
-      <div class="ml-auto">
-        <%= link_to page_url(:new_product_backlog_item), class: 'btn btn-sm btn-outline-success' do -%>
-          <i class="fa fa-plus"></i>
-          追加する
-        <% end -%>
+    <div class="st-GroundBlock">
+      <div class="st-GroundBlock_Header">
+        <h1 class="sw-Content_Title">
+          プロダクトバックログ
+        </h1>
+        <span class="st-GroundBlock_Line"></span>
+        <div class="ml-auto">
+          <%= link_to page_url(:new_product_backlog_item), class: 'btn btn-sm btn-outline-success' do -%>
+            <i class="fa fa-plus"></i>
+            追加する
+          <% end -%>
+        </div>
       </div>
-    </div>
-    <div class="pbl-Body">
-      <div class="pbl-List">
-        <% items.each do |i| -%>
-          <div class="pbl-Item">
-            <div class="pbl-Item_Header">
-              <i class="pbl-Item_Handle"></i>
-            </div>
-            <div class="pbl-Item_Body">
-              <span class="pbl-Item_Id">
-                #<%= i[:id] %>
-              </span>
-              <%= link_to page_url(:product_backlog_item), class: 'pbl-Item_Content' do %>
-                <%= i[:content].join('<br>').html_safe %>
-              <% end -%>
-            </div>
-            <div class="pbl-Item_Tail">
-              <div class="pbl-Item_Amount">
-                <%= i[:point] %>
+      <div class="st-GroundBlock_Body">
+        <div class="pbl-List">
+          <% items.each do |i| -%>
+            <div class="pbl-Item">
+              <div class="pbl-Item_Header">
+                <i class="pbl-Item_Handle"></i>
+              </div>
+              <div class="pbl-Item_Body">
+                <span class="pbl-Item_Id">
+                  #<%= i[:id] %>
+                </span>
+                <%= link_to page_url(:product_backlog_item), class: 'pbl-Item_Content' do %>
+                  <%= i[:content].join('<br>').html_safe %>
+                <% end -%>
+              </div>
+              <div class="pbl-Item_Tail">
+                <div class="pbl-Item_Amount">
+                  <%= i[:point] %>
+                </div>
               </div>
             </div>
-          </div>
-        <% end -%>
+          <% end -%>
+        </div>
       </div>
     </div>
   </div>
