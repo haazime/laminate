@@ -20,7 +20,7 @@
   @include nf;
   display: inline-block;
   font-size: $app-font-size-sm;
-  margin: .25rem auto .75rem;
+  margin: 1rem auto;
 
   a {
     &:after {
