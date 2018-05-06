@@ -30,7 +30,7 @@
       <div class="st-GroundBlock_Body">
         <div class="pbl-List">
           <% items.each do |i| -%>
-            <div class="pbl-Item">
+            <%= link_to page_url(:product_backlog_item), class: 'pbl-Item' do %>
               <div class="pbl-Item_Header">
                 <i class="pbl-Item_Handle"></i>
               </div>
@@ -38,16 +38,16 @@
                 <span class="pbl-Item_Id">
                   #<%= i[:id] %>
                 </span>
-                <%= link_to page_url(:product_backlog_item), class: 'pbl-Item_Content' do %>
+                <p class="pbl-Item_Content">
                   <%= i[:content].join('<br>').html_safe %>
-                <% end -%>
+                </p>
               </div>
               <div class="pbl-Item_Tail">
                 <div class="pbl-Item_Amount">
                   <%= i[:point] %>
                 </div>
               </div>
-            </div>
+            <% end -%>
           <% end -%>
         </div>
       </div>
