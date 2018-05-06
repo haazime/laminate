@@ -1,5 +1,6 @@
-@mixin paper {
+@mixin paper($bg: #FFF) {
   box-shadow: 0 0 8px $app-color-shadow;
+  background-color: $bg;
 }
 
 @mixin nf {
