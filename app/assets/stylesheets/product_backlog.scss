@@ -1,9 +1,11 @@
 .pbl-List {
   @include paper;
+  padding-bottom: .5rem;
 }
 
 .pbl-Item {
   @extend .d-flex;
+  @include xxul($app-color-text, $app-color-text);
   padding: 1rem 1.5rem;
   border-bottom: 1px solid $app-color-gray1;
 
@@ -35,9 +37,9 @@
 
 .pbl-Item_Content {
   @include nf;
-  @include xul($app-color-text, $app-color-text);
   line-height: 1.1;
   font-size: $app-font-size;
+  margin: 0;
 }
 
 .pbl-Item_Tail {

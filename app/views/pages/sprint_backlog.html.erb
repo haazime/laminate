@@ -1,0 +1,70 @@
+<% items = [
+  { id: 10, content: %w(ユーザーとして プロダクトバックログアイテムを追加したい それは、プロダクトのアイデアを記録したいから), point: 5, tasks: 9 },
+  { id: 11, content: %w(ユーザーとして プロダクトバックログアイテムの優先順位を入れ替えたい それは、効率的にプロダクトを開発したいから), point: 8, tasks: 15 },
+  { id: 12, content: %w(ユーザー登録), point: 8, tasks: 8 },
+  { id: 13, content: %w(ログイン), point: 13, tasks: 4 },
+] %>
+<% members = [
+  { initials: 'AB', color: '#A0C0D4' },
+  { initials: 'MN', color: '#FFBAC1' },
+  { initials: 'XY', color: '#D4F5F2' },
+] %>
+<div class="row">
+  <div class="breadcrumbs">
+    <%= link_to 'プロジェクトホーム', '' -%>
+    <span class="current">
+      スプリントバックログ
+    </span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-18 mx-auto">
+    <div class="st-GroundBlock">
+      <div class="st-GroundBlock_Header">
+        <h1 class="sw-Content_Title">
+          スプリントバックログ
+        </h1>
+        <span class="st-GroundBlock_Line"></span>
+      </div>
+      <div class="st-GroundBlock_Body">
+        <div class="sbl-List">
+          <% items.each do |i| %>
+            <a href="/" class="sbl-Item">
+              <div class="sbl-PBI">
+                <div class="sbl-PBI_Header">
+                  <span class="sbl-PBI_Id">
+                    #<%= i[:id] %>
+                  </span>
+                </div>
+                <div class="sbl-PBI_Body">
+                  <p class="sbl-PBI_Content">
+                    <%= i[:content].join('<br>').html_safe %>
+                  </p>
+                </div>
+              </div>
+              <div class="sbl-TaskBlock">
+                <div class="sbl-Task">
+                  <% done = (1..i[:tasks]).to_a.sample %>
+                  <div class="sbl-Task_Progress">
+                    <%= done %>/<%= i[:tasks] %>
+                  </div>
+                  <span class="sbl-Task_Label">
+                    完了
+                  </span>
+                  <div class="sbl-Task_Dots">
+                    <% i[:tasks].times do |n| %>
+                      <% status = n < done ? 'checked' : 'ready' %>
+                      <span class="sbl-Task_Dot">
+                        <i class="chk-Item_Mark chk-Item_Mark-sm chk-Item_Mark-<%= status %>"></i>
+                      </span>
+                    <% end -%>
+                  </div>
+                </div>
+              </div>
+            </a>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
