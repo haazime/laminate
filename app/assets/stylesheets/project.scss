@@ -1,22 +1,29 @@
-.prjl_Item {
-  @extend .d-flex;
+.prjl-List {
   @include paper;
-  padding: 1.5rem;
 }
 
-.prjl_Item_ProjectNameLink {
+.prjl-Item {
+  @extend .d-flex;
+  padding: 1.5rem 2rem 1rem 1.5rem;
+  border-bottom: 1px solid $app-color-gray1;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.prjl-Item_ProjectNameLink {
   @include xul($app-color-text, $app-color-text);
 }
 
-.prjl_Item_ProjectName {
+.prjl-Item_ProjectName {
   @include heading(1.5rem);
   @include nf;
   font-size: $app-font-size-lg;
 }
 
-.prjl_Item_Navs {
+.prjl-Item_Navs {
   @extend .ml-auto;
-  width: 30%;
 }
 
 ul.prjl-Item_LinkList {
