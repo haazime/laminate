@@ -1,10 +1,10 @@
 .pbi-Block {
-  padding: 2rem 3.25rem 1rem;
+  padding: $app-space-y $app-space-x .5rem;
   border-bottom: 1px solid $app-color-gray1;
 }
 
 .pbi-Block-Secondary {
-  padding: 1rem 3.25rem;
+  padding: 1rem $app-space-x;
   border-bottom: 1px solid $app-color-gray1;
 
   &:last-child {

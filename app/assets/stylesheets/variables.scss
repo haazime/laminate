@@ -1,11 +1,11 @@
+$app-font-size: .875rem;
+$app-font-size-sm: .75rem;
+$app-font-size-lg: 1rem;
+
 $app-color-text: #1C2023;
 $app-color-subtext: #7F7E63;
 $app-color-bg: #F7F8F9;
 $app-color-shadow: #ced4da;
-
-$app-font-size: .875rem;
-$app-font-size-sm: .75rem;
-$app-font-size-lg: 1rem;
 
 $app-color-gray1: #e9ecef;
 $app-color-gray2: #aaacae;
@@ -22,3 +22,6 @@ $app-color-red: #dc3545;
   background-color: lighten($app-color-primary, 35%);
   color: darken($app-color-primary, 10%);
 }
+
+$app-space-y: 1.75rem;
+$app-space-x: 2.25rem;

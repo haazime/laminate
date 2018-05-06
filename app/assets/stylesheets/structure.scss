@@ -1,21 +1,18 @@
 .st-Content {
   @extend .sw-Sheet;
-  padding: 0 0 2rem;
+  padding: 0 0 $app-space-y;
 
   &-mt {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
 }
 
 .st-Content_Header {
-  @mixin base {
-    @extend .d-flex;
-    padding: 2rem 0 .325rem;
-    margin: 0 3rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid $app-color-text;
-  }
-  @include base;
+  @extend .d-flex;
+  padding: $app-space-y 0 .325rem;
+  margin: 0 $app-space-x;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid $app-color-text;
 }
 
 .st-Header_Actions {
@@ -24,5 +21,5 @@
 }
 
 .st-Content_Body {
-  padding: 0 3.25rem;
+  padding: 0 $app-space-x;
 }

@@ -32,8 +32,7 @@
 .pbl-Item_Content {
   @include nf;
   @include xul($app-color-text, $app-color-text);
-  margin: .25rem 0 0;
-  line-height: 1.125rem;
+  line-height: 1.1;
   font-size: $app-font-size;
 }
 
