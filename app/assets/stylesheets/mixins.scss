@@ -30,6 +30,16 @@
   }
 }
 
+@mixin xxul($color: $link-color, $hover-color: $link-hover-color) {
+  text-decoration: none;
+  color: $color;
+
+  &:hover {
+    text-decoration: none;
+    color: $hover-color;
+  }
+}
+
 @mixin circle($size) {
   display: inline-block;
   vertical-align: middle;
