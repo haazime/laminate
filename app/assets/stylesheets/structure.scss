@@ -23,3 +23,13 @@
 .st-Content_Body {
   padding: 0 $app-space-x;
 }
+
+.st-BreakHeader {
+  @extend .d-flex, .align-items-center;
+}
+
+.st-BreakHeader_Line {
+  margin-left: .5rem;
+  border-bottom: 1px solid darken($app-color-gray1, 3%);
+  flex-grow: 1;
+}
