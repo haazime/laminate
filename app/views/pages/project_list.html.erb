@@ -1,29 +1,42 @@
+<% names = %w(Alpha Bravo Charlie Delta Eco) %>
 <div class="row">
-  <div class="col-lg-17 mx-auto">
-    <div class="st-Content st-Content-mt">
-      <div class="st-Content_Header">
+  <div class="col-lg-15 mx-auto">
+    <div class="st-GroundBlock st-GroundBlock-mt">
+      <div class="st-GroundBlock_Header">
         <h1 class="sw-Content_Title">
           あなたのプロジェクト
         </h1>
-        <div class="st-Header_Actions">
-          <%= link_to page_url(:new_project), class: 'btn btn-sm btn-success' do -%>
+        <span class="st-GroundBlock_Line"></span>
+        <div class="ml-auto">
+          <%= link_to page_url(:new_project), class: 'btn btn-sm btn-outline-success' do -%>
             <i class="fa fa-plus"></i>
-            作成する
+            追加する
           <% end -%>
         </div>
       </div>
-      <div class="st-Content_Body">
-        <% %w(alpha bravo charlie delta eco).each do |n| -%>
+    </div>
+    <div class="st-GroundBlock_Body">
+      <div class="prjl-List">
+        <% names.each do |name| %>
           <div class="prjl-Item">
-            <%= link_to "プロジェクト#{n}", '', class: 'prjl-Item_Name' %>
-            <ul class="prjl-Item_Navs sw-HorizontalList">
-              <li>
-                <%= link_to 'プロダクトバックログへ', page_url(:product_backlog) %>
-              </li>
-              <li>
-                <%= link_to 'スプリントバックログへ', '' %>
-              </li>
-            </ul>
+            <%= link_to '', class: 'prjl-Item_ProjectNameLink' do %>
+              <h2 class="prjl-Item_ProjectName">
+                プロジェクト<%= name %>
+              </h2>
+            <% end -%>
+            <div class="prjl-Item_Navs">
+              <ul class="prjl-Item_LinkList">
+                <li>
+                  <%= link_to 'ホーム', '' %>
+                </li>
+                <li>
+                  <%= link_to 'プロダクトバックログ', page_url(:product_backlog) %>
+                </li>
+                <li>
+                  <%= link_to 'スプリントバックログ', '' %>
+                </li>
+              </ul>
+            </div>
           </div>
         <% end -%>
       </div>

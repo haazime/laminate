@@ -1,4 +1,4 @@
-.st-Content {
+.st-Sheet {
   @extend .sw-Sheet;
   padding: 0 0 $app-space-y;
 
@@ -7,12 +7,11 @@
   }
 }
 
-.st-Content_Header {
+.st-Sheet_Header {
   @extend .d-flex;
-  padding: $app-space-y 0 .325rem;
+  padding: $app-space-y 0 0;
   margin: 0 $app-space-x;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid $app-color-text;
+  margin-bottom: $app-space-y;
 }
 
 .st-Header_Actions {
@@ -20,6 +19,27 @@
   @extend .ml-auto;
 }
 
-.st-Content_Body {
+.st-Sheet_Body {
   padding: 0 $app-space-x;
+}
+
+.st-GroundBlock {
+  &-mt {
+    margin-top: 1rem;
+  }
+}
+
+.st-GroundBlock_Header {
+  @extend .d-flex, .align-items-center;
+  margin-bottom: 1rem;
+}
+
+.st-GroundBlock_Line {
+  flex-grow: 1;
+  margin-left: .5rem;
+  border-bottom: 1px solid $app-color-shadow;
+}
+
+.st-GroundBlock_Body {
+  padding: 0 2rem;
 }

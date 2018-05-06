@@ -1,6 +1,10 @@
+.pbl-List {
+  @include paper;
+}
+
 .pbl-Item {
   @extend .d-flex;
-  padding: .75rem 0;
+  padding: 1rem 1.5rem;
   border-bottom: 1px solid $app-color-gray1;
 
   &:last-child {
