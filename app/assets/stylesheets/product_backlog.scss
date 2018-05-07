@@ -1,22 +1,16 @@
 .pbl-List {
-  @include paper;
-  padding-bottom: .5rem;
+  border: 1px solid $app-color-gray1;
+  border-radius: .2rem;
 }
 
 .pbl-Item {
-  @extend .d-flex;
-  @include xxul($app-color-text, $app-color-text);
-  padding: 1rem 1.5rem;
+  @extend .d-flex, .align-items-center;
+  padding: 1rem 1rem 1rem .5rem;
   border-bottom: 1px solid $app-color-gray1;
 
   &:last-child {
     border-bottom: none;
   }
-}
-
-.pbl-Item_Header {
-  @extend .d-flex, .align-items-center;
-  margin-right: 1.25rem;
 }
 
 .pbl-Item_Handle {
@@ -25,11 +19,16 @@
   color: $app-color-gray2;
 }
 
-.pbl-Item_Body {
-  @extend .d-flex, .flex-column;
+.pbl-Item_Main {
+  @extend .d-flex, .align-items-center;
+  @include xxul($app-color-text, $app-color-text);
+  width: 100%;
+  margin-left: .5rem;
 }
 
 .pbl-Item_Id {
+  display: block;
+  width: 3.5rem;
   font-size: $app-font-size;
   font-weight: bold;
   color: $app-color-subtext;

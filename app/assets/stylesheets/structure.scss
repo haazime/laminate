@@ -14,11 +14,6 @@
   margin-bottom: $app-space-y;
 }
 
-.st-Header_Actions {
-  @extend .d-flex, .align-items-center;
-  @extend .ml-auto;
-}
-
 .st-Sheet_Body {
   padding: 0 $app-space-x;
 }

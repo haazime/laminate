@@ -13,13 +13,12 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-16 mx-auto">
-    <div class="st-GroundBlock">
-      <div class="st-GroundBlock_Header">
+  <div class="col-lg-17 mx-auto">
+    <div class="st-Sheet">
+      <div class="st-Sheet_Header">
         <h1 class="sw-Content_Title">
           プロダクトバックログ
         </h1>
-        <span class="st-GroundBlock_Line"></span>
         <div class="ml-auto">
           <%= link_to page_url(:new_product_backlog_item), class: 'btn btn-sm btn-outline-success' do -%>
             <i class="fa fa-plus"></i>
@@ -27,27 +26,25 @@
           <% end -%>
         </div>
       </div>
-      <div class="st-GroundBlock_Body">
+      <div class="st-Sheet_Body">
         <div class="pbl-List">
           <% items.each do |i| -%>
-            <%= link_to page_url(:product_backlog_item), class: 'pbl-Item' do %>
-              <div class="pbl-Item_Header">
-                <i class="pbl-Item_Handle"></i>
-              </div>
-              <div class="pbl-Item_Body">
+            <div class="pbl-Item">
+              <i class="pbl-Item_Handle"></i>
+              <%= link_to page_url(:product_backlog_item), class: 'pbl-Item_Main' do %>
                 <span class="pbl-Item_Id">
                   #<%= i[:id] %>
                 </span>
                 <p class="pbl-Item_Content">
                   <%= i[:content].join('<br>').html_safe %>
                 </p>
-              </div>
-              <div class="pbl-Item_Tail">
-                <div class="pbl-Item_Amount">
-                  <%= i[:point] %>
+                <div class="pbl-Item_Tail">
+                  <span class="pbl-Item_Amount">
+                    <%= i[:point] %>
+                  </span>
                 </div>
-              </div>
-            <% end -%>
+              <% end -%>
+            </div>
           <% end -%>
         </div>
       </div>
