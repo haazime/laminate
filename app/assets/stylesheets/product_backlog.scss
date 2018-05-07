@@ -5,7 +5,7 @@
 
 .pbl-Item {
   @extend .d-flex, .align-items-center;
-  padding: 1rem 1rem 1rem .5rem;
+  padding: .75rem 0;
   border-bottom: 1px solid $app-color-gray1;
 
   &:last-child {
@@ -15,6 +15,7 @@
 
 .pbl-Item_Handle {
   @extend .fa, .fa-bars;
+  margin: 0 1rem;
   font-size: 1.25rem;
   color: $app-color-gray2;
 }
@@ -23,12 +24,11 @@
   @extend .d-flex, .align-items-center;
   @include xxul($app-color-text, $app-color-text);
   width: 100%;
-  margin-left: .5rem;
+  margin-right: 1rem;
 }
 
 .pbl-Item_Id {
   display: block;
-  width: 3.5rem;
   font-size: $app-font-size;
   font-weight: bold;
   color: $app-color-subtext;

@@ -13,7 +13,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-17 mx-auto">
+  <div class="col-lg-16 mx-auto">
     <div class="st-Sheet">
       <div class="st-Sheet_Header">
         <h1 class="sw-Content_Title">
@@ -32,12 +32,14 @@
             <div class="pbl-Item">
               <i class="pbl-Item_Handle"></i>
               <%= link_to page_url(:product_backlog_item), class: 'pbl-Item_Main' do %>
-                <span class="pbl-Item_Id">
-                  #<%= i[:id] %>
-                </span>
-                <p class="pbl-Item_Content">
-                  <%= i[:content].join('<br>').html_safe %>
-                </p>
+                <div class="pbl-Item_Body">
+                  <span class="pbl-Item_Id">
+                    #<%= i[:id] %>
+                  </span>
+                  <p class="pbl-Item_Content">
+                    <%= i[:content].join('<br>').html_safe %>
+                  </p>
+                </div>
                 <div class="pbl-Item_Tail">
                   <span class="pbl-Item_Amount">
                     <%= i[:point] %>
