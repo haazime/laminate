@@ -10,8 +10,16 @@
 .st-Sheet_Header {
   @extend .d-flex;
   padding: $app-space-y 0 0;
-  margin: 0 $app-space-x;
-  margin-bottom: $app-space-y;
+  margin: 0 $app-space-x 1rem;
+
+  &-mb {
+    margin-bottom: $app-space-y;
+  }
+}
+
+.st-Sheet_HeaderActions {
+  @extend .ml-auto;
+  margin-top: -0.125rem;
 }
 
 .st-Sheet_Body {

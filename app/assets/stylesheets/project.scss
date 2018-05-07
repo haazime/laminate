@@ -1,11 +1,6 @@
-.prjl-List {
-  border-radius: .2rem;
-  border: 1px solid $app-color-gray1;
-}
-
 .prjl-Item {
   @extend .d-flex;
-  padding: 1.25rem 1rem;
+  padding: 1.25rem 0;
   border-bottom: 1px solid $app-color-gray1;
 
   &:last-child {
