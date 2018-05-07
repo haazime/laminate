@@ -1,6 +1,6 @@
 .prjl-Item {
   @extend .d-flex;
-  padding: 1.25rem 0;
+  padding: 1.25rem 0 .75rem;
   border-bottom: 1px solid $app-color-gray1;
 
   &:last-child {

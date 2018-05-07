@@ -8,7 +8,7 @@
 }
 
 .st-Sheet_Header {
-  @extend .d-flex;
+  @extend .d-flex, .align-items-center;
   padding: $app-space-y 0 0;
   margin: 0 $app-space-x 1rem;
 
@@ -18,7 +18,7 @@
 }
 
 .st-Sheet_HeaderActions {
-  @extend .ml-auto;
+  margin-left: 1rem;
 }
 
 .st-Sheet_Body {
