@@ -1,12 +1,6 @@
-.pbl-List {
-  @include paper;
-  padding-bottom: .5rem;
-}
-
 .pbl-Item {
-  @extend .d-flex;
-  @include xxul($app-color-text, $app-color-text);
-  padding: 1rem 1.5rem;
+  @extend .d-flex, .align-items-center;
+  padding: .75rem 0;
   border-bottom: 1px solid $app-color-gray1;
 
   &:last-child {
@@ -14,22 +8,21 @@
   }
 }
 
-.pbl-Item_Header {
-  @extend .d-flex, .align-items-center;
-  margin-right: 1.25rem;
-}
-
 .pbl-Item_Handle {
   @extend .fa, .fa-bars;
   font-size: 1.25rem;
   color: $app-color-gray2;
+  margin-right: 1.5rem;
 }
 
-.pbl-Item_Body {
-  @extend .d-flex, .flex-column;
+.pbl-Item_Main {
+  @extend .d-flex, .align-items-center;
+  @include xxul($app-color-text, $app-color-text);
+  width: 100%;
 }
 
 .pbl-Item_Id {
+  display: block;
   font-size: $app-font-size;
   font-weight: bold;
   color: $app-color-subtext;

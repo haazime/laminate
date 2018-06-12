@@ -5,7 +5,7 @@
 }
 
 .sw-Content_Title {
-  @include heading;
+  @include heading(1.25rem);
 }
 
 .sw-BlankSlate {

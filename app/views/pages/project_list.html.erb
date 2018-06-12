@@ -1,44 +1,43 @@
 <% names = %w(Alpha Bravo Charlie Delta Eco) %>
 <div class="row">
-  <div class="col-lg-15 mx-auto">
-    <div class="st-GroundBlock st-GroundBlock-mt">
-      <div class="st-GroundBlock_Header">
+  <div class="col-lg-15 mx-auto mt-4">
+    <div class="st-Sheet">
+      <div class="st-Sheet_Header">
         <h1 class="sw-Content_Title">
           あなたのプロジェクト
         </h1>
-        <span class="st-GroundBlock_Line"></span>
-        <div class="ml-auto">
+        <div class="st-Sheet_HeaderActions">
           <%= link_to page_url(:new_project), class: 'btn btn-sm btn-outline-success' do -%>
             <i class="fa fa-plus"></i>
             追加する
           <% end -%>
         </div>
       </div>
-    </div>
-    <div class="st-GroundBlock_Body">
-      <div class="prjl-List">
-        <% names.each do |name| %>
-          <div class="prjl-Item">
-            <%= link_to '', class: 'prjl-Item_ProjectNameLink' do %>
-              <h2 class="prjl-Item_ProjectName">
-                プロジェクト<%= name %>
-              </h2>
-            <% end -%>
-            <div class="prjl-Item_Navs">
-              <ul class="prjl-Item_LinkList">
-                <li>
-                  <%= link_to 'ホーム', '' %>
-                </li>
-                <li>
-                  <%= link_to 'プロダクトバックログ', page_url(:product_backlog) %>
-                </li>
-                <li>
-                  <%= link_to 'スプリントバックログ', '' %>
-                </li>
-              </ul>
+      <div class="st-Sheet_Body">
+        <div class="prjl-List">
+          <% names.each do |name| %>
+            <div class="prjl-Item">
+              <%= link_to '', class: 'prjl-Item_ProjectNameLink' do %>
+                <h2 class="prjl-Item_ProjectName">
+                  プロジェクト<%= name %>
+                </h2>
+              <% end -%>
+              <div class="prjl-Item_Navs">
+                <ul class="prjl-Item_LinkList">
+                  <li>
+                    <%= link_to 'ホーム', '' %>
+                  </li>
+                  <li>
+                    <%= link_to 'プロダクトバックログ', page_url(:product_backlog) %>
+                  </li>
+                  <li>
+                    <%= link_to 'スプリントバックログ', '' %>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        <% end -%>
+          <% end -%>
+        </div>
       </div>
     </div>
   </div>
