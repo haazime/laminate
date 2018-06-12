@@ -1,6 +1,6 @@
 @mixin paper($bg: #FFF) {
   border-radius: .3rem;
-  box-shadow: 0 0 10px $app-color-shadow;
+  box-shadow: 0 0 10px $gray-200;
   background-color: $bg;
 }
 
@@ -13,7 +13,7 @@
   font-weight: $weight;
   margin: 0;
   line-height: 1;
-  color: $app-color-gray5;
+  color: $gray-500;
 }
 
 @mixin fa-content($content) {
@@ -55,7 +55,7 @@
 
 @mixin avatar($size) {
   @include circle($size);
-  color: $app-color-gray5;
+  color: $gray-800;
 }
 
 @mixin icon-button {

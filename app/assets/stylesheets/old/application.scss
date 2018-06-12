@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'bootstrap/functions';
+@import 'bootstrap_variables';
+@import 'bootstrap';
+
+@import 'font-awesome';
+@import 'mixins';
+@import 'site_wide';
+@import 'form';
+@import 'check_item';
+@import 'structure';
+@import 'navigation';
+@import 'user';
+@import 'product_backlog';
+@import 'product_backlog_item';
+@import 'project';
+@import 'sprint_backlog';
+
+body {
+  padding-bottom: 3rem;
+}
