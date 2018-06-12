@@ -30,8 +30,6 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
-$enable-shadows:            true !default;
-
 $spacer: 1rem !default;
 
 $body-bg:                   #FDFEFB;
@@ -60,6 +58,8 @@ $font-family-sans-serif:      'Rounded Mplus 1c', -apple-system, BlinkMacSystemF
 $font-size-base:              .875rem !default; // Assumes the browser default, typically `16px`
 
 $headings-margin-bottom:      0 !default;
+
+$navbar-padding-y:            .125rem;
 
 $dropdown-border-radius:      .5rem !default;
 $dropdown-padding-y:          .4rem !default;
