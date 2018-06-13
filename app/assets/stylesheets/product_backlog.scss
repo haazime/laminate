@@ -1,3 +1,13 @@
+.pbl-Container {
+  margin-top: 1.25rem;
+}
+
 .pbl-Container_Header {
   text-align: center;
 }
+
+.pbl-Container_Body {
+  @extend .mx-auto;
+  margin: 1rem 0;
+}
+

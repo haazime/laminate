@@ -1,0 +1,27 @@
+.fe-Container {
+  @include card;
+  background-color: $white;
+  padding: .75rem 1.25rem 1rem;
+  margin-bottom: .5rem;
+}
+
+.fe-Header {
+  @extend .d-flex;
+  margin-bottom: .5rem;
+}
+
+.fe-Number {
+  font-weight: bold;
+  color: $secondary;
+}
+
+.fe-ContentName {
+  @extend .ml-auto;
+  font-weight: bold;
+  font-size: $font-size-sm;
+  color: $gray-500;
+}
+
+.fe-Content {
+  @include nf;
+}

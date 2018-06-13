@@ -18,7 +18,7 @@ a.btn,
 .breadcrumbs {
   @include nf;
   display: inline-block;
-  margin: 1rem auto 2rem;
+  margin: 1rem auto 0;
 
   a {
     &:first-child {
