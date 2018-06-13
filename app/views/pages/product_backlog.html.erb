@@ -1,66 +1,21 @@
-<% items = [
-  { id: 10, content: %w(ユーザーとして プロダクトバックログアイテムを追加したい それは、プロダクトのアイデアを記録したいから), point: 5 },
-  { id: 11, content: %w(ユーザーとして プロダクトバックログアイテムの優先順位を入れ替えたい それは、効率的にプロダクトを開発したいから), point: 8 },
-  { id: 12, content: %w(ユーザー登録), point: 8 },
-  { id: 13, content: %w(ログイン), point: 13 },
-] %>
 <div class="row">
   <div class="breadcrumbs">
-    <%= link_to 'プロジェクトホーム', '' -%>
+    <%= link_to 'Leave me alone!', page_url(:project) -%>
     <span class="current">
       プロダクトバックログ
     </span>
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-16 mx-auto">
-    <div class="st-Sheet">
-      <div class="st-Sheet_Header">
-        <h1 class="sw-Content_Title">
-          プロダクトバックログ
-        </h1>
-        <div class="st-Sheet_HeaderActions">
-          <%= link_to page_url(:new_product_backlog_item), class: 'btn btn-sm btn-outline-success' do -%>
-            <i class="fa fa-plus"></i>
-            追加する
-          <% end -%>
-        </div>
-        <div class="ml-auto">
-          <div class="dropdown">
-            <a id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-ellipsis-h" style="cursor:pointer;font-size:1.5rem;"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
-        </div>
+  <div class="col">
+    <div class="pbl-Container">
+      <div class="pbl-Container_Header">
+        <%= link_to page_url(:new_feature), class: 'btn btn-success' do %>
+          <i class="icon-Add icon-Prefix"></i>
+          新しいフィーチャーを追加
+        <% end -%>
       </div>
-      <div class="st-Sheet_Body">
-        <div class="pbl-List">
-          <% items.each do |i| -%>
-            <div class="pbl-Item">
-              <i class="pbl-Item_Handle"></i>
-              <%= link_to page_url(:product_backlog_item), class: 'pbl-Item_Main' do %>
-                <div class="pbl-Item_Body">
-                  <span class="pbl-Item_Id">
-                    #<%= i[:id] %>
-                  </span>
-                  <p class="pbl-Item_Content">
-                    <%= i[:content].join('<br>').html_safe %>
-                  </p>
-                </div>
-                <div class="pbl-Item_Tail">
-                  <span class="pbl-Item_Amount">
-                    <%= i[:point] %>
-                  </span>
-                </div>
-              <% end -%>
-            </div>
-          <% end -%>
-        </div>
+      <div class="pbl-Container_Body">
       </div>
     </div>
   </div>
