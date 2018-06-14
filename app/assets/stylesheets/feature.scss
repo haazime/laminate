@@ -25,6 +25,7 @@
 
 .fe-Content {
   @include nf;
+  @include xul($body-color, $body-color);
 }
 
 .fe-Header {
