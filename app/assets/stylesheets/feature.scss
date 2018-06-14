@@ -1,4 +1,4 @@
-.fe-Summary {
+.fe-Background {
   @include card;
   background-color: $white;
   padding: .5rem 1rem;
@@ -25,4 +25,7 @@
 
 .fe-Content {
   @include nf;
+}
+
+.fe-Header {
 }
