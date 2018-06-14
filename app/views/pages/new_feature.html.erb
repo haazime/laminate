@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="breadcrumbs">
+    <%= link_to 'Leave me alone!', page_url(:project) -%>
+    <%= link_to 'プロダクトバックログ', page_url(:product_backlog) -%>
+    <span class="current">
+      新しいフィーチャー
+    </span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 mx-auto">
+    <div class="sw-Main">
+      <div class="fe-Background">
+        <form>
+          <div class="fe-Header">
+            <div class="form-group">
+              <label>
+                概要:
+              </label>
+              <input type="text" placeholder="フィーチャーをひとことで表すと？" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>
+                詳細:
+              </label>
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <div class="frm-Actions">
+              <button class="btn btn-success">
+                追加する
+              </button>
+              <%= link_to 'キャンセル', page_url(:product_backlog), class: 'frm-Action_Cancel' %>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
