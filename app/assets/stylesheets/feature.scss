@@ -1,25 +1,26 @@
-.fe-Container {
+.fe-Summary {
   @include card;
   background-color: $white;
-  padding: .75rem 1.25rem 1rem;
-  margin-bottom: .5rem;
+  padding: .5rem 1rem;
+  margin-bottom: .25rem;
 }
 
-.fe-Header {
-  @extend .d-flex;
-  margin-bottom: .5rem;
+.fe-Summary_Body {
+  @extend .d-flex, .align-items-center;
 }
 
-.fe-Number {
-  font-weight: bold;
-  color: $secondary;
-}
-
-.fe-ContentName {
-  @extend .ml-auto;
-  font-weight: bold;
-  font-size: $font-size-sm;
+.fe-Anchor {
+  @extend .fa, .fa-bars;
+  font-size: 1rem;
+  margin-right: .75rem;
   color: $gray-500;
+}
+
+.fe-Point {
+  @extend .ml-auto;
+  @include circle(1.5rem);
+  background-color: lighten($purple, 40%);
+  color: $purple;
 }
 
 .fe-Content {
