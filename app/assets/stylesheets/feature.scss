@@ -5,8 +5,16 @@
   margin-bottom: .25rem;
 }
 
+.fe-Background-lg {
+  padding: 1.25rem 1.75rem;
+}
+
 .fe-Summary_Body {
   @extend .d-flex, .align-items-center;
+}
+
+.fe-Summary_Point {
+  @extend .ml-auto;
 }
 
 .fe-Anchor {
@@ -14,19 +22,62 @@
   font-size: 1rem;
   margin-right: .75rem;
   color: $gray-500;
+  cursor: pointer;
 }
 
 .fe-Point {
-  @extend .ml-auto;
   @include circle(1.5rem);
   background-color: lighten($purple, 40%);
   color: $purple;
 }
 
-.fe-Content {
+.fe-Title {
   @include nf;
-  @include xul($body-color, $body-color);
+  font-weight: bold;
 }
 
-.fe-Header {
+.fe-Title-lg {
+  font-size: $font-size-lg;
+}
+
+.fe-Detail_Section {
+  @extend .d-flex, .align-items-center;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover .fe-Detail_Edit {
+    display: block;
+  }
+}
+
+.fe-Detail_Edit {
+  margin-left: .5rem;
+  display: none;
+}
+
+.fe-Description {
+  @include nf;
+}
+
+.fe-Detail_Point {
+  @extend .d-flex, .align-items-center;
+}
+
+.fe-PointBase {
+  @extend .d-flex, .align-items-center;
+  @include nf;
+  margin-left: .5rem;
+  font-size: $font-size-sm;
+  color: $secondary;
+
+  .fe-Point {
+    @include circle(1rem);
+    margin-left: .25rem;
+    background-color: $gray-200;
+    color: $gray-700;
+  }
 }
