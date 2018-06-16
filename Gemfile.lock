@@ -1,6 +1,5 @@
 GEM
   remote: https://rubygems.org/
-  remote: https://rails-assets.org/
   specs:
     actioncable (5.2.0)
       actionpack (= 5.2.0)
@@ -55,6 +54,7 @@ GEM
       sass (>= 3.5.2)
     builder (3.2.3)
     byebug (10.0.2)
+    chartkick (2.3.5)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     erubi (1.7.1)
@@ -178,6 +178,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.0.0)
   byebug
+  chartkick
   font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails

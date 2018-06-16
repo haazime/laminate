@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="breadcrumbs">
+    <%= link_to 'Leave me alone!', page_url(:project) -%>
+    <span class="current">
+      リリース計画
+    </span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-14 mx-auto">
+    <div class="sw-Main">
+      <div class="rp-Background">
+        <%= line_chart(
+          [
+            {
+              name: '予測',
+              data: {
+                0 => 200,
+                1 => 150,
+                2 => 100,
+                3 => 50,
+                4 => 0,
+              }
+            },
+            {
+              name: '実績',
+              data: {
+                0 => 200,
+                1 => 203,
+                2 => 172,
+                3 => 120,
+              }
+            },
+          ],
+          min: 0,
+          max: 250,
+          colors: ['#AAA', '#714CA5'],
+          height: '60vh',
+          curve: false
+        ) %>
+      </div>
+    </div>
+  </div>
+</div>
