@@ -30,7 +30,7 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
-$spacer: 1rem !default;
+$spacer:      1rem !default;
 
 $body-bg:                   #F9F9EF;
 $body-color:                $black;
@@ -56,10 +56,15 @@ $border-radius:               .325rem !default;
 $font-family-sans-serif:      'Rounded Mplus 1c', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
 $font-size-base:              .875rem !default; // Assumes the browser default, typically `16px`
+$input-color:                 $gray-900 !default;
 
 $paragraph-margin-bottom:     0 !default;
 $headings-margin-bottom:      0 !default;
 $label-margin-bottom:         .25rem !default;
+
+$input-btn-focus-width:     .1rem !default;
+$input-focus-border-color:  $yellow !default;
+$input-btn-focus-color:     $yellow !default;
 
 $navbar-padding-y:            .125rem;
 
