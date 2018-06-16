@@ -7,7 +7,7 @@
 }
 
 .sw-Editable {
-  @extend .d-flex, .align-items-center;
+  @extend .d-flex, .align-items-center, .flex-wrap;
 
   &:hover .sw-Editable_Action {
     display: block;
@@ -15,6 +15,6 @@
 }
 
 .sw-Editable_Action {
-  margin-left: .5rem;
+  margin-left: .25rem;
   display: none;
 }

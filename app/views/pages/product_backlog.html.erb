@@ -19,7 +19,12 @@
         <div class="fe-Background">
           <div class="fe-Summary_Body">
             <i class="fe-Anchor"></i>
-            <%= link_to 'ユーザー登録の説明', page_url(:show_feature), class: 'fe-Title' %>
+            <div class="fe-Summary_Content sw-Editable">
+              <span class="fe-Content">
+                訪問者として、ユーザー登録したい。
+              </span>
+              <%= link_to '編集する', page_url(:show_feature), class: 'sw-Editable_Action sw-Link sw-Link-sm' %>
+            </div>
             <span class="fe-Point fe-Summary_Point">
               1
             </span>
@@ -28,7 +33,12 @@
         <div class="fe-Background">
           <div class="fe-Summary_Body">
             <i class="fe-Anchor"></i>
-            <%= link_to 'Todoリストの自動保存', page_url(:show_feature), class: 'fe-Title'  %>
+            <div class="fe-Summary_Content sw-Editable">
+              <span class="fe-Content">
+                ユーザーとして、Todoリストが自動で保存されてほしい。
+              </span>
+              <%= link_to '編集する', page_url(:show_feature), class: 'sw-Editable_Action sw-Link sw-Link-sm' %>
+            </div>
             <span class="fe-Point fe-Summary_Point">
               13
             </span>
@@ -37,7 +47,12 @@
         <div class="fe-Background">
           <div class="fe-Summary_Body">
             <i class="fe-Anchor"></i>
-            <%= link_to 'リマインド設定間隔', page_url(:show_feature), class: 'fe-Title'  %>
+            <div class="fe-Summary_Content sw-Editable">
+              <span class="fe-Content">
+                ユーザーとして、リマインドの間隔を設定したい。
+              </span>
+              <%= link_to '編集する', page_url(:show_feature), class: 'sw-Editable_Action sw-Link sw-Link-sm' %>
+            </div>
             <span class="fe-Point fe-Summary_Point">
               8
             </span>

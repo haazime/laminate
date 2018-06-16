@@ -13,6 +13,10 @@
   @extend .d-flex, .align-items-center;
 }
 
+.fe-Summary_Content {
+  max-width: 85%;
+}
+
 .fe-Summary_Point {
   @extend .ml-auto;
 }
@@ -31,15 +35,6 @@
   color: $purple;
 }
 
-.fe-Title {
-  @include nf;
-  font-weight: bold;
-}
-
-.fe-Title-lg {
-  font-size: $font-size-lg;
-}
-
 .fe-Detail_Section {
   @extend .d-flex, .align-items-center;
   margin-bottom: 1.25rem;
@@ -49,7 +44,7 @@
   }
 }
 
-.fe-Description {
+.fe-Content {
   @include nf;
 }
 
