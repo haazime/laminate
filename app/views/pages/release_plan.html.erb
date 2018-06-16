@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="breadcrumbs">
+    <%= link_to 'Leave me alone!', page_url(:project) -%>
+    <span class="current">
+      リリース計画
+    </span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-14 mx-auto">
+    <div class="sw-Main">
+      <div class="rp-Background">
+        <div class="rp-Chart">
+          <%= line_chart(
+            [
+              {
+                name: '実績',
+                data: {
+                  0 => 200,
+                  1 => 203,
+                  2 => 172,
+                  3 => 120,
+                }
+              },
+              {
+                name: '予測（悲観）',
+                data: {
+                  0 => nil,
+                  1 => nil,
+                  2 => nil,
+                  3 => 120,
+                  4 => 80,
+                  5 => 50,
+                  6 => 20,
+                  7 => 5,
+                  8 => 0
+                }
+              },
+              {
+                name: '予測（標準）',
+                data: {
+                  0 => nil,
+                  1 => nil,
+                  2 => nil,
+                  3 => 120,
+                  4 => 90,
+                  5 => 55,
+                  6 => 30,
+                  7 => 0
+                }
+              },
+            ],
+            max: 250,
+            colors: ['#714CA5', '#dc3545', '#4FA533'],
+            height: '60vh',
+            curve: false,
+          ) %>
+        </div>
+        <div class="rp-Source">
+          リリース予定日
+          2018/11/23 ~ 2018/12/18
+          ベロシティ
+          直近3イテレーションの平均
+          38
+          過去ワースト3の平均
+          20
+          リリース予定フィーチャー
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
