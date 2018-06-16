@@ -5,3 +5,12 @@
 .icon-Add {
   @extend .fa, .fa-plus;
 }
+
+.icon-Check {
+  font-size: 1.5rem;
+}
+
+.icon-Check-disabled {
+  @extend .fa, .fa-minus-circle;
+  color: $gray-300;
+}

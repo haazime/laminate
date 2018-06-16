@@ -5,3 +5,16 @@
 .sw-Link-sm {
   font-size: $font-size-sm;
 }
+
+.sw-Editable {
+  @extend .d-flex, .align-items-center;
+
+  &:hover .sw-Editable_Action {
+    display: block;
+  }
+}
+
+.sw-Editable_Action {
+  margin-left: .5rem;
+  display: none;
+}

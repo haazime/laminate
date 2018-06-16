@@ -42,21 +42,11 @@
 
 .fe-Detail_Section {
   @extend .d-flex, .align-items-center;
-  width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 
   &:last-child {
     margin-bottom: 0;
   }
-
-  &:hover .fe-Detail_Edit {
-    display: block;
-  }
-}
-
-.fe-Detail_Edit {
-  margin-left: .5rem;
-  display: none;
 }
 
 .fe-Description {
@@ -80,4 +70,27 @@
     background-color: $gray-200;
     color: $gray-700;
   }
+}
+
+.fe-AcceptanceCriteria {
+  margin-top: 1rem;
+}
+
+.fe-AcceptanceCriteria_Title {
+  font-size: $font-size-sm;
+  color: $secondary;
+}
+
+.fe-AcceptanceCriteria_Body {
+  margin-top: .5rem;
+}
+
+.fe-AcceptanceCriterion {
+  @extend .d-flex, .align-items-center;
+  margin-bottom: .5rem;
+}
+
+.fe-AcceptanceCriterion_Content {
+  @include nf;
+  margin-left: .5rem;
 }
