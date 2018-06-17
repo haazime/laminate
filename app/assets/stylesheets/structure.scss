@@ -1,0 +1,16 @@
+.st-Main {
+  margin-top: 1.25rem;
+}
+
+.st-Editable {
+  @extend .d-flex, .align-items-center, .flex-wrap;
+
+  &:hover .st-Editable_Action {
+    display: block;
+  }
+}
+
+.st-Editable_Action {
+  margin-left: .25rem;
+  display: none;
+}
