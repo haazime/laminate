@@ -48,16 +48,11 @@
   }
 }
 
-.rp-Section_Header {
+.rp-Feature_Header {
   @extend .d-flex, .align-items-center;
   padding-bottom: .25rem;
-  border-bottom: 1px solid $gray-900;
+  border-bottom: 1px solid $gray-500;
   margin-bottom: 1rem;
-}
-
-.rp-Section_Title {
-  font-size: $font-size-base;
-  font-weight: bold;
 }
 
 .rp-TotalPoint_Wrapper {
