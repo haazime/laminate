@@ -1,0 +1,8 @@
+<div class="col-lg-12 pbl-Container_Body">
+  <%= render partial: 'pbl_item', locals: { content: "訪問者として、ユーザー登録したい。", point: 5 } %>
+  <%= render partial: 'pbl_item', locals: { content: "ユーザーとして、Todoリストが自動で保存されてほしい。", point: 13 } %>
+  <%= render partial: 'pbl_item', locals: { content: "ユーザーとして、リマインドの間隔を設定したい。", point: 8 } %>
+  <% item_count.times do |n| -%>
+    <%= render partial: 'pbl_item', locals: { content: "ユーザーストーリー#{n}", point: [0,1,2,3,5,8,13,21].sample } %>
+  <% end -%>
+</div>
