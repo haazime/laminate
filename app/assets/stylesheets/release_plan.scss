@@ -4,6 +4,17 @@
   margin-bottom: 1rem;
 }
 
+.rp-Section_Header {
+  padding-bottom: .25rem;
+  border-bottom: 1px solid $gray-900;
+  margin-bottom: .5rem;
+}
+
+.rp-Section_Title {
+  font-size: $font-size-base;
+  font-weight: bold;
+}
+
 .rp-Section_Spec {
   margin-bottom: 1rem;
   padding: 0 .5rem;
@@ -11,13 +22,6 @@
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.rp-Spec_Header {
-  font-size: $font-size-base;
-  font-weight: bold;
-  border-bottom: 1px solid $gray-900;
-  margin-bottom: .5rem;
 }
 
 .rp-Spec_Row {
