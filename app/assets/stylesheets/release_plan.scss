@@ -1,4 +1,41 @@
-.rp-Background {
+.rp-Section_Chart {
   @include card($white);
-  padding: 1rem;
+  padding: .5rem 1rem .5rem .5rem;
+  margin-bottom: 1rem;
+}
+
+.rp-Section_Spec {
+  margin-bottom: 1rem;
+  padding: 0 .5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.rp-Spec_Header {
+  font-size: $font-size-base;
+  font-weight: bold;
+  border-bottom: 1px solid $gray-900;
+  margin-bottom: .5rem;
+}
+
+.rp-Spec_Row {
+  @extend .form-group, .row;
+  @extend .d-flex, .align-items-center;
+  margin-bottom: 0;
+}
+
+.rp-Spec_Label {
+  @extend .col-lg-10, .col-form-label, .text-right;
+  font-size: $font-size-sm;
+}
+
+.rp-Factor:disabled {
+  padding: 0;
+  background: transparent;
+  border: none;
+  appearance: none;
+  font-size: $font-size-lg;
+  font-weight: bold;
 }

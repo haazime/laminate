@@ -1,0 +1,18 @@
+<div class="rp-Section_Chart">
+  <%= line_chart(
+    [
+      {
+        name: '実績',
+        data: { 0 => 200, 1 => 203, 2 => 172, 3 => 120 }
+      },
+      {
+        name: '予測（見積り）',
+        data: { 0 => nil, 1 => nil, 2 => nil, 3 => 120, 4 => 90, 5 => 55, 6 => 30, 7 => 0 }
+      },
+    ],
+    max: 250,
+    colors: ['#714CA5', '#aaa'],
+    height: '40vh',
+    curve: false,
+  ) %>
+</div>
