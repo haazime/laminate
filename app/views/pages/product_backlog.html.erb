@@ -6,59 +6,16 @@
     </span>
   </div>
 </div>
-<div class="row">
+<div class="row sw-Main">
   <div class="col">
-    <div class="st-Main">
-      <div class="pbl-Container_Header">
-        <%= link_to page_url(:new_feature), class: 'btn btn-sm btn-success' do %>
-          <i class="icon-Add icon-Prefix"></i>
-          新しいフィーチャーを追加
-        <% end -%>
-      </div>
-      <div class="col-lg-12 pbl-Container_Body">
-        <div class="fe-Background">
-          <div class="fe-Summary_Body">
-            <i class="fe-Anchor"></i>
-            <div class="fe-Summary_Content st-Editable">
-              <span class="fe-Content">
-                訪問者として、ユーザー登録したい。
-              </span>
-              <%= link_to '編集する', page_url(:show_feature), class: 'st-Editable_Action sw-Link sw-Link-sm' %>
-            </div>
-            <span class="fe-Point fe-Summary_Point">
-              1
-            </span>
-          </div>
-        </div>
-        <div class="fe-Background">
-          <div class="fe-Summary_Body">
-            <i class="fe-Anchor"></i>
-            <div class="fe-Summary_Content st-Editable">
-              <span class="fe-Content">
-                ユーザーとして、Todoリストが自動で保存されてほしい。
-              </span>
-              <%= link_to '編集する', page_url(:show_feature), class: 'st-Editable_Action sw-Link sw-Link-sm' %>
-            </div>
-            <span class="fe-Point fe-Summary_Point">
-              13
-            </span>
-          </div>
-        </div>
-        <div class="fe-Background">
-          <div class="fe-Summary_Body">
-            <i class="fe-Anchor"></i>
-            <div class="fe-Summary_Content st-Editable">
-              <span class="fe-Content">
-                ユーザーとして、リマインドの間隔を設定したい。
-              </span>
-              <%= link_to '編集する', page_url(:show_feature), class: 'st-Editable_Action sw-Link sw-Link-sm' %>
-            </div>
-            <span class="fe-Point fe-Summary_Point">
-              8
-            </span>
-          </div>
-        </div>
-      </div>
+    <div class="pbl-Container_Header">
+      <%= link_to page_url(:new_feature), class: 'btn btn-sm btn-success' do %>
+        <i class="icon-Add icon-Prefix"></i>
+        新しいフィーチャーを追加
+      <% end -%>
+    </div>
+    <div class="col-lg-12 pbl-Container_Body">
+      <%= render partial: 'pbl_list', locals: { template: 'pbl_item', item_count: 10 } %>
     </div>
   </div>
 </div>

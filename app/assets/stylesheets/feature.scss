@@ -5,16 +5,26 @@
   margin-bottom: .25rem;
 }
 
+.fe-Background-sm {
+  padding: .325rem .75rem;
+}
+
 .fe-Background-lg {
   @include padding-base;
 }
 
 .fe-Summary_Body {
   @extend .d-flex, .align-items-center;
+  font-size: $font-size-base;
+}
+
+.fe-Summary_Body-sm {
+  font-size: $font-size-sm;
 }
 
 .fe-Summary_Content {
   max-width: 85%;
+  font-size: 1em;
 }
 
 .fe-Summary_Point {
@@ -23,14 +33,14 @@
 
 .fe-Anchor {
   @extend .fa, .fa-bars;
-  font-size: 1rem;
   margin-right: .75rem;
+  font-size: 1em;
   color: $gray-500;
   cursor: pointer;
 }
 
 .fe-Point {
-  @include circle(1.5rem);
+  @include circle(1.875em);
   background-color: lighten($purple, 40%);
   color: $purple;
 }
