@@ -4,45 +4,59 @@
   margin-bottom: 1rem;
 }
 
-.rp-Section_Header {
-  @extend .d-flex, .align-items-center;
-  padding-bottom: .25rem;
-  border-bottom: 1px solid $gray-900;
-  margin-bottom: .5rem;
-}
-
-.rp-Section_Title {
-  font-size: $font-size-base;
-  font-weight: bold;
-}
-
-.rp-Section_Spec {
-  margin-bottom: 1rem;
-  padding: 0 .5rem;
+.rp-Section_Plan {
+  margin: 1.5rem 0;
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-.rp-Spec_Row {
-  @extend .form-group, .row;
+.rp-Plan_Header {
+  text-align: right;
+  margin-bottom: .5rem;
+}
+
+.rp-Plan_Title {
+  display: inline-block;
+  font-size: $font-size-base;
+  color: $white;
+  background-color: $gray-800;
+  padding: .125rem .75rem;
+  border-radius: .25rem;
+}
+
+.rp-Factor {
+  max-width: 20rem;
+  margin-left: auto;
+
+  tr {
+    border-bottom: 1px solid $gray-500;
+  }
+
+  th {
+    text-align: right;
+    padding-right: 1rem;
+    height: 2.25rem;
+    color: $secondary
+  }
+
+  td {
+    text-align: left;
+    font-size: $font-size-lg;
+    font-weight: bold;
+  }
+}
+
+.rp-Section_Header {
   @extend .d-flex, .align-items-center;
-  margin-bottom: 0;
+  padding-bottom: .25rem;
+  border-bottom: 1px solid $gray-900;
+  margin-bottom: 1rem;
 }
 
-.rp-Spec_Label {
-  @extend .col-lg-10, .col-form-label, .text-right;
-  font-size: $font-size-sm;
-}
-
-.rp-Factor:disabled {
-  @include sf;
-  font-size: $font-size-lg;
-  padding: 0;
-  background: transparent;
-  border: none;
-  appearance: none;
+.rp-Section_Title {
+  font-size: $font-size-base;
   font-weight: bold;
 }
 
