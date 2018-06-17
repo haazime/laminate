@@ -37,11 +37,12 @@
 }
 
 .rp-Factor:disabled {
+  @include sf;
+  font-size: $font-size-lg;
   padding: 0;
   background: transparent;
   border: none;
   appearance: none;
-  font-size: $font-size-lg;
   font-weight: bold;
 }
 

@@ -16,6 +16,10 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+@mixin sf {
+  font-family: $font-family-base;
+}
+
 @mixin fa-content($content) {
   font-family: 'FontAwesome';
   content: $content;
