@@ -5,6 +5,7 @@
 }
 
 .rp-Section_Header {
+  @extend .d-flex, .align-items-center;
   padding-bottom: .25rem;
   border-bottom: 1px solid $gray-900;
   margin-bottom: .5rem;
@@ -42,6 +43,19 @@
   appearance: none;
   font-size: $font-size-lg;
   font-weight: bold;
+}
+
+.rp-TotalPoint_Wrapper {
+  @extend .ml-auto;
+}
+
+.rp-TotalPoint {
+  display: inline-block;
+  font-weight: bold;
+  padding: .125rem .5rem;
+  border-radius: 1rem;
+  background-color: lighten($purple, 40%);
+  color: $purple;
 }
 
 .rp-Feature_Check {
