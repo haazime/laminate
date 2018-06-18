@@ -1,0 +1,77 @@
+<div class="fe-Background fe-Background-lg">
+  <div class="fe-Detail">
+    <div class="fe-Detail_Main">
+      <p class="fe-Content">
+        ユーザーとして、Todoリストが自動で保存されて欲しい。
+        <br>
+        それは、保存するのを忘れることがあるからだ。
+      </p>
+      <span class="fe-Detail_Point fe-Point fe-Point-lg">
+        13
+      </span>
+    </div>
+    <%= link_to '編集する', '#', class: 'sw-Link sw-Link-sm' %>
+  </div>
+  <hr />
+  <div class="fe-AcceptanceCriteria">
+    <div class="fe-AcceptanceCriteria_Header">
+      <h2 class="fe-AcceptanceCriteria_Title">
+        受け入れ基準:
+      </h2>
+    </div>
+    <div class="fe-AcceptanceCriteria_Body">
+      <div class="fe-AcceptanceCriterion st-Editable">
+        <i class="icon-Check icon-Check-disabled"></i>
+        <span class="fe-AcceptanceCriterion_Content">
+          タイトル編集後に自動保存されること
+        </span>
+        <%= link_to '編集する', '#', class: 'st-Editable_Action sw-Link sw-Link-sm' %>
+        <%= link_to '削除する', '#', class: 'st-Editable_Action sw-Link sw-Link-sm' %>
+      </div>
+      <div class="fe-AcceptanceCriterion st-Editable">
+        <i class="icon-Check icon-Check-disabled"></i>
+        <span class="fe-AcceptanceCriterion_Content">
+          Todo編集後に自動保存されること
+        </span>
+        <%= link_to '編集する', '#', class: 'st-Editable_Action sw-Link sw-Link-sm' %>
+        <%= link_to '削除する', '#', class: 'st-Editable_Action sw-Link sw-Link-sm' %>
+      </div>
+      <div class="fe-AcceptanceCriterion st-Editable">
+        <i class="icon-Check icon-Check-disabled"></i>
+        <span class="fe-AcceptanceCriterion_Content">
+          Todo削除後に自動保存されること
+        </span>
+        <%= link_to '編集する', '#', class: 'st-Editable_Action sw-Link sw-Link-sm' %>
+        <%= link_to '削除する', '#', class: 'st-Editable_Action sw-Link sw-Link-sm' %>
+      </div>
+      <div class="fe-AcceptanceCriterion st-Editable">
+        <i class="icon-Check icon-Check-disabled"></i>
+        <span class="fe-AcceptanceCriterion_Content">
+          Todo完了後に自動保存されること
+        </span>
+        <%= link_to '編集する', '#', class: 'st-Editable_Action sw-Link sw-Link-sm' %>
+        <%= link_to '削除する', '#', class: 'st-Editable_Action sw-Link sw-Link-sm' %>
+      </div>
+      <div class="fe-AcceptanceCriterion st-Editable">
+        <i class="icon-Check icon-Check-disabled"></i>
+        <span class="fe-AcceptanceCriterion_Content">
+          Todo未完了後に自動保存されること
+        </span>
+        <%= link_to '編集する', '#', class: 'st-Editable_Action sw-Link sw-Link-sm' %>
+        <%= link_to '削除する', '#', class: 'st-Editable_Action sw-Link sw-Link-sm' %>
+      </div>
+    </div>
+    <div class="fe-AcceptanceCriterionForm">
+      <form>
+        <div class="input-group">
+          <input type="text" class="form-control">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-success">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

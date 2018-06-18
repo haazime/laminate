@@ -45,6 +45,16 @@
   color: $purple;
 }
 
+.fe-Point-lg {
+  @include circle(2.25em);
+  background-color: lighten($purple, 40%);
+  color: $purple;
+}
+
+.fe-Detail {
+  font-size: $font-size-base;
+}
+
 .fe-Detail_Main {
   @extend .d-flex, .align-items-center;
   margin-bottom: .5rem;
