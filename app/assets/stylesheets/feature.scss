@@ -1,16 +1,16 @@
 .fe-Background {
   @include card;
-  @include padding-sm;
+  @include padding-base;
   background-color: $white;
   margin-bottom: .25rem;
 }
 
 .fe-Background-sm {
-  padding: .325rem .75rem;
+  @include padding-sm;
 }
 
 .fe-Background-lg {
-  @include padding-base;
+  @include padding-lg;
 }
 
 .fe-Summary_Body {

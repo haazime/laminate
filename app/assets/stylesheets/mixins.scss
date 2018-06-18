@@ -1,9 +1,13 @@
-@mixin padding-sm {
+@mixin padding-base {
   padding: .5rem 1rem;
 }
 
-@mixin padding-base {
-  padding: 1.25rem 1.75rem;
+@mixin padding-sm {
+  padding: .325rem .75rem;
+}
+
+@mixin padding-lg {
+  padding: 1.25rem 1.5rem;
 }
 
 @mixin card($bg: $white) {
