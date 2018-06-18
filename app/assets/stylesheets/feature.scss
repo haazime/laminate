@@ -45,13 +45,9 @@
   color: $purple;
 }
 
-.fe-Detail_Section {
+.fe-Detail_Main {
   @extend .d-flex, .align-items-center;
-  margin-bottom: 1.25rem;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  margin-bottom: .5rem;
 }
 
 .fe-Content {
@@ -59,22 +55,7 @@
 }
 
 .fe-Detail_Point {
-  @extend .d-flex, .align-items-center;
-}
-
-.fe-PointBase {
-  @extend .d-flex, .align-items-center;
-  @include nf;
-  margin-left: .5rem;
-  font-size: $font-size-sm;
-  color: $secondary;
-
-  .fe-Point {
-    @include circle(1rem);
-    margin-left: .25rem;
-    background-color: $gray-200;
-    color: $gray-700;
-  }
+  @extend .ml-auto;
 }
 
 .fe-AcceptanceCriteria {
