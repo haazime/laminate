@@ -4,7 +4,6 @@ textarea {
 }
 
 label {
-  margin-bottom: .25rem;
   font-weight: bold;
   color: $secondary;
 }
@@ -13,11 +12,8 @@ label {
   text-decoration: none;
 }
 
-.custom-control-label,
-.form-check-label {
-  color: $secondary;
-  font-weight: normal;
-  font-size: $font-size-lg;
+.frm-Element-block {
+  display: block;
 }
 
 .frm-Actions {

@@ -68,6 +68,17 @@
   @extend .ml-auto;
 }
 
+.fe-PointRadio {
+  @extend .custom-control, .custom-radio, .custom-control-inline;
+}
+
+.fe-PointLabel {
+  @extend .custom-control-label;
+  font-weight: normal;
+  color: $body-color;
+  font-size: $font-size-lg;
+}
+
 .fe-AcceptanceCriteria {
   margin-top: 1rem;
 }
