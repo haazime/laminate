@@ -22,9 +22,9 @@
             <label class="frm-Element-block">
               フィーチャーの大きさ
             </label>
-            <% [0,1,2,3,5,8,13,20,40,100].each do |n| %>
-              <div class="fe-PointRadio">
-                <input type="radio" id="point<%= n %>" name="point" class="custom-control-input">
+            <% [0,1,2,3,5,8,13,20,40,100,'?'].each do |n| %>
+              <div class="form-check form-check-inline">
+                <input type="radio" id="point<%= n %>" name="point" class="form-check-input">
                 <label class="fe-PointLabel" for="point<%= n %>">
                   <%= n %>
                 </label>
@@ -55,7 +55,6 @@
           </div>
         </form>
       </div>
-      <hr />
       <div class="fe-AcceptanceCriteria">
         <div class="fe-AcceptanceCriteria_Header">
           <h2 class="fe-AcceptanceCriteria_Title">

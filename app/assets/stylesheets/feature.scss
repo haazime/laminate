@@ -56,31 +56,33 @@
 }
 
 .fe-Detail_Main {
-  @extend .d-flex, .align-items-center;
-  margin-bottom: .5rem;
+  @extend .d-flex;
+  margin-bottom: 1rem;
 }
 
 .fe-Content {
   @include nf;
 }
 
+.fe-Content-lg {
+  font-size: $font-size-lg;
+}
+
 .fe-Detail_Point {
   @extend .ml-auto;
 }
 
-.fe-PointRadio {
-  @extend .custom-control, .custom-radio, .custom-control-inline;
-}
-
 .fe-PointLabel {
-  @extend .custom-control-label;
-  font-weight: normal;
-  color: $body-color;
-  font-size: $font-size-lg;
+  @extend .form-check-label;
+  color: $gray-900;
+  margin-bottom: -0.125rem;
 }
 
 .fe-AcceptanceCriteria {
+  background-color: lighten($gray-100, 3%);
   margin-top: 1rem;
+  padding: 1rem;
+  border-radius: .3rem;
 }
 
 .fe-AcceptanceCriteria_Title {
