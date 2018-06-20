@@ -4,13 +4,8 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
-    <!--
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">書籍管理</a>
-      </li>
-    </ul>
-    -->
-    <%= render 'shared/user_menu' %>
+    <% if current_user -%>
+      <%= render 'user_menu' %>
+    <% end -%>
   </div>
 </nav>
