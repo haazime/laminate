@@ -1,0 +1,15 @@
+.tm-Join {
+  @include card($white);
+  @include padding-lg;
+  margin-top: 15vh;
+  text-align: center;
+}
+
+.tm-Join_ProjectName {
+  font-weight: bold;
+}
+
+.tm-Join_Guide {
+  @include nf;
+  margin: .5rem 0 2rem;
+}
