@@ -12,7 +12,7 @@
 
 @mixin card($bg: $white) {
   border-radius: .5rem;
-  box-shadow: 0 0 5px $gray-100;
+  box-shadow: 0 0 5px $gray-200;
   background-color: $bg;
 }
 
