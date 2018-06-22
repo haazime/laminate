@@ -1,7 +1,29 @@
+.sw-Link-sm {
+  font-size: $font-size-sm;
+}
+
+.sw-Subtext {
+  color: $secondary;
+}
+
 .sw-Main {
   margin-top: 1.25rem;
 }
 
-.sw-Link-sm {
-  font-size: $font-size-sm;
+.sw-Section {
+  @include card;
+}
+
+.sw-Section_Header {
+  border-bottom: 1px solid $gray-100;
+  padding: 1rem 1rem .75rem;
+}
+
+.sw-Section_Title {
+  font-size: $font-size-lg;
+  font-weight: bold;
+}
+
+.sw-Section_Body {
+  padding: 1rem 1rem 1.5rem;
 }
