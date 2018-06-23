@@ -3,7 +3,6 @@
 }
 
 .sw-Strong {
-  font-size: $font-size-lg;
   font-weight: bold;
 }
 
@@ -25,7 +24,8 @@
 }
 
 .sw-Section_Title {
-  font-size: $font-size-lg;
+  @include heading;
+  color: $gray-600;
 }
 
 .sw-Section_Body {

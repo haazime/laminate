@@ -58,13 +58,12 @@ $font-family-sans-serif:      'Rounded Mplus 1c', -apple-system, BlinkMacSystemF
 $font-size-base:              .875rem !default; // Assumes the browser default, typically `16px`
 $input-color:                 $gray-900 !default;
 
-$paragraph-margin-bottom:     0 !default;
-$headings-margin-bottom:      0 !default;
-
 $input-border-color:        $gray-300 !default;
 $input-btn-focus-width:     .1rem !default;
 $input-focus-border-color:  $yellow !default;
 $input-btn-focus-color:     $yellow !default;
+
+$paragraph-margin-bottom:   .5rem !default;
 
 $navbar-padding-y:            .125rem;
 

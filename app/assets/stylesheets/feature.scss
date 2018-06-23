@@ -62,6 +62,7 @@
 
 .fe-Content {
   @include nf;
+  @include no-mb;
 }
 
 .fe-Content-lg {

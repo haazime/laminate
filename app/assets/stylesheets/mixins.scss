@@ -1,3 +1,13 @@
+@mixin no-mb {
+  margin-bottom: 0;
+}
+
+@mixin heading {
+  @include no-mb;
+  font-size: $font-size-lg;
+  font-weight: bold;
+}
+
 @mixin padding-base {
   padding: .5rem 1rem;
 }

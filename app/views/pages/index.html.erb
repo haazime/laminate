@@ -1,9 +1,20 @@
 <div class="row sw-Main">
   <div class="col">
+    <h5>
+      Public
+    </h5>
     <ul>
       <li>
         <%= link_to 'Sign in', page_url(:sign_in) %>
       </li>
+      <li>
+        <%= link_to 'Join to team', page_url(:join_to_team) %>
+      </li>
+    </ul>
+    <h5>
+      Project
+    </h5>
+    <ul>
       <li>
         <%= link_to 'New Feature', page_url(:new_feature) %>
       </li>
@@ -18,9 +29,6 @@
       </li>
       <li>
         <%= link_to 'Relase Plan', page_url(:release_plan) %>
-      </li>
-      <li>
-        <%= link_to 'Join to team', page_url(:join_to_team) %>
       </li>
       <li>
         <%= link_to 'Invite people', page_url(:invite_people) %>

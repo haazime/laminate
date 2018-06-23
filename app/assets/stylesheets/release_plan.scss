@@ -30,10 +30,11 @@
 }
 
 .rp-Plan_Title {
+  @include no-mb;
   display: inline-block;
   font-size: $font-size-base;
   color: $white;
-  background-color: $gray-800;
+  background-color: $body-color;
   padding: .125rem .75rem;
   border-radius: .25rem;
 }
