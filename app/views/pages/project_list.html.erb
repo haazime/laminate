@@ -7,17 +7,21 @@
         </h2>
       </div>
       <div class="sw-Section_Body">
-        <ul class="sw-List">
-          <li>
-            <%= link_to 'Leave me alone!', '#' %>
-          </li>
-          <li>
-            <%= link_to 'Laminate', '#' %>
-          </li>
-        </ul>
-      </div>
-      <div class="sw-Section_Footer">
-        <%= link_to '新しいプロジェクトを追加する', page_url(:new_project), class: 'btn btn-sm btn-success' %>
+        <div class="d-flex">
+          <ul class="sw-List">
+            <li>
+              <%= link_to 'Leave me alone!', '#' %>
+            </li>
+            <li>
+              <%= link_to 'Laminate', '#' %>
+            </li>
+          </ul>
+          <div class="ml-auto">
+            <%= link_to page_url(:new_project), class: 'btn btn-success' do %>
+              <i class="icon-Add"></i>
+            <% end -%>
+          </div>
+        </div>
       </div>
     </div>
   </div>
