@@ -1,0 +1,40 @@
+.it-Date {
+  @extend .text-center;
+  display: inline-block;
+  background-color: $gray-400;
+  font-size: $font-size-base;
+  width: 5em;
+  border-radius: .5em;
+}
+
+.it-Date-today {
+  background-color: theme-color('primary');
+}
+
+.it-Date_Month {
+  display: block;
+  color: $white;
+  font-size: .75em;
+  padding: .125em 0;
+}
+
+.it-Date_Day {
+  display: block;
+  background-color: $white;
+  font-size: 1.75em;
+  font-weight: bold;
+  margin: 0 1px;
+}
+
+.it-Date_Dow {
+  display: block;
+  font-size: .5em;
+  padding: .125em 0 .25em;
+  color: $white;
+}
+
+.it-Forward {
+  @extend .fa, .fa-arrow-right;
+  color: $gray-400;
+  font-size: 1.5em;
+}

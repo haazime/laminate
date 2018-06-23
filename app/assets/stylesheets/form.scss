@@ -1,3 +1,16 @@
+.btn-secondary {
+  font-weight: bold;
+  background-color: $white;
+  color: $secondary;
+  border-color: lighten($secondary, 25%);
+
+  &:hover {
+    background-color: $gray-100;
+    color: darken($secondary, 5%);
+    border-color: lighten($secondary, 25%);
+  }
+}
+
 input,
 textarea {
   @include nf;

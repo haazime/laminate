@@ -6,6 +6,10 @@
   @extend .fa, .fa-plus;
 }
 
+.icon-Configure {
+  @extend .fa, .fa-cog;
+}
+
 .icon-Check {
   font-size: 1.5rem;
 }
