@@ -41,22 +41,17 @@
 
 .sw-Section_Header {
   border-bottom: 1px solid $gray-100;
-  padding: 1rem 1.5rem .75rem;
+  padding: .75rem 1.5rem .5rem;
 }
 
 .sw-Section_Title {
   @include heading;
+  font-size: $font-size-base;
   color: $gray-600;
 }
 
-.sw-Section_Title-border {
-  display: inline-block;
-  border-bottom: 1px solid $gray-400;
-  padding-bottom: .25rem;
-}
-
 .sw-Section_Body {
-  padding: 1rem 1.5rem 1.5rem;
+  padding: 1.25rem 1.5rem 1.75rem;
 }
 
 .sw-Section_Footer {

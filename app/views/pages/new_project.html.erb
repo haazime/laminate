@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="breadcrumbs">
+    <%= link_to 'あなたのプロジェクト', page_url(:project_list) -%>
+    <span class="current">
+      新しいプロジェクト
+    </span>
+  </div>
+</div>
+<div class="row sw-Main">
+  <div class="col-lg-12 mx-auto">
+    <div class="fe-Background fe-Background-lg">
+      <form>
+        <div class="form-group">
+          <label>
+            プロジェクト名
+          </label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="frm-Actions">
+          <button class="btn btn-success">
+            追加する
+          </button>
+          <%= link_to 'キャンセル', page_url(:project_list), class: 'frm-Action_Cancel' %>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
