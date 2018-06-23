@@ -1,5 +1,17 @@
 .usr-Avatar {
-  @include avatar(1.75rem);
+  display: inline-block;
+  margin: 0 .125rem;
+
+  &:first-child { margin-left: 0 }
+  &:last-child { margin-right: 0 }
+}
+
+.usr-Avatar-sm {
+  @include circle(1.75rem);
+}
+
+.usr-Avatar-md {
+  @include circle(2.25rem);
 }
 
 .usr-Name {
