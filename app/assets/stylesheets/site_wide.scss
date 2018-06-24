@@ -72,3 +72,7 @@
 .sw-Check-marked {
   color: theme-color('success');
 }
+
+.sw-IconButton {
+  @include icon-button;
+}

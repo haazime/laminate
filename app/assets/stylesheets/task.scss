@@ -42,3 +42,9 @@
   @extend .d-flex, .align-items-center, .justify-content-center;
   height: 100%;
 }
+
+.tsk-SignUp_Icon {
+  @extend .fa, .fa-user-circle-o;
+  color: theme-color('success');
+  font-size: 1.375rem;
+}
