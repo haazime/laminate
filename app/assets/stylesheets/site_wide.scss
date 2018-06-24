@@ -28,7 +28,11 @@
 }
 
 .sw-Main-lg {
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
+}
+
+.sw-Main-xl {
+  margin-top: 3.75rem;
 }
 
 .sw-Section {
@@ -57,4 +61,18 @@
 .sw-Section_Footer {
   border-top: 1px solid $gray-100;
   padding: .75rem 1.5rem;
+}
+
+.sw-Check {
+  @extend .fa, .fa-check-circle;
+  font-size: 1.5rem;
+  color: $gray-500;
+}
+
+.sw-Check-marked {
+  color: theme-color('success');
+}
+
+.sw-IconButton {
+  @include icon-button;
 }

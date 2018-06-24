@@ -1,8 +1,9 @@
 .fe-Background {
   @include card;
   @include padding-base;
-  background-color: $white;
+  width: 100%;
   margin-bottom: .25rem;
+  background-color: $white;
 }
 
 .fe-Background-sm {

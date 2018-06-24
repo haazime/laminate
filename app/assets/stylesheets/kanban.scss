@@ -1,0 +1,30 @@
+.kb-Board {
+  @include card;
+  background-color: $white;
+  padding: 0 .25rem .5rem;
+}
+
+.kb-Row {
+  @extend .d-flex;
+  width: 100%;
+}
+
+.kb-Row-Header {
+  padding: .5rem 0;
+}
+
+.kb-Column {
+  width: 33%;
+  margin: 0 .125rem;
+
+  &:first-child { margin-left: 0 }
+  &:last-child { margin-right: 0 }
+}
+
+.kb-Column_Title {
+  @include heading;
+  text-align: center;
+  font-weight: bold;
+  font-size: $font-size-lg;
+  color: $secondary;
+}
