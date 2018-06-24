@@ -1,0 +1,124 @@
+<div class="row">
+  <div class="breadcrumbs">
+    <%= link_to 'Leave me alone!', page_url(:show_project) -%>
+    <span class="current">
+      タスクかんばん
+    </span>
+  </div>
+</div>
+<div class="row sw-Main">
+  <div class="col-lg-20 mx-auto">
+    <div class="kb-Container">
+      <div class="kb-Row kb-Row-mb">
+        <div class="kb-Column">
+          <h2 class="kb-Column_Title">
+            Todo
+          </h2>
+        </div>
+        <div class="kb-Column">
+          <h2 class="kb-Column_Title">
+            Doing
+          </h2>
+        </div>
+        <div class="kb-Column">
+          <h2 class="kb-Column_Title">
+            Done
+          </h2>
+        </div>
+      </div>
+      <div class="kb-Row">
+        <div class="fe-Background kb-Row-mb">
+          <div class="fe-Summary_Body">
+            <div class="fe-Summary_Content st-Editable">
+              <span class="fe-Content">
+                訪問者として、ユーザー登録したい。
+              </span>
+              <%= link_to '確認する', page_url(:show_feature), class: 'st-Editable_Action sw-Link sw-Link-sm' %>
+            </div>
+            <span class="fe-Point fe-Summary_Point">
+              5
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="kb-Row">
+        <div class="kb-Column">
+          <div class="tsk-Background">
+            <span class="tsk-Content">
+              動作確認
+            </span>
+            <div class="tsk-Footer">
+              <div class="tsk-Workers">
+                <%= image_tag 'mob_e.png', class: 'usr-Avatar-xs' %>
+              </div>
+              <span class="tsk-Time">
+                0.5h
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-Column">
+          <div class="tsk-Background">
+            <span class="tsk-Content">
+              View実装
+            </span>
+            <div class="tsk-Footer">
+              <div class="tsk-Workers">
+                <%= image_tag 'mob_b.png', class: 'usr-Avatar-xs' %>
+              </div>
+              <span class="tsk-Time">
+                1.5h
+              </span>
+            </div>
+          </div>
+          <div class="tsk-Background">
+            <span class="tsk-Content">
+              App実装
+            </span>
+            <div class="tsk-Footer">
+              <div class="tsk-Workers">
+                <%= image_tag 'mob_a.png', class: 'usr-Avatar-xs' %>
+                <%= image_tag 'mob_d.png', class: 'usr-Avatar-xs' %>
+              </div>
+              <span class="tsk-Time">
+                3.0h
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="kb-Column">
+          <div class="tsk-Background">
+            <span class="tsk-Content">
+              UI設計
+            </span>
+            <div class="tsk-Footer">
+              <div class="tsk-Workers">
+                <%= image_tag 'mob_a.png', class: 'usr-Avatar-xs' %>
+                <%= image_tag 'mob_b.png', class: 'usr-Avatar-xs' %>
+                <%= image_tag 'mob_c.png', class: 'usr-Avatar-xs' %>
+              </div>
+              <span class="tsk-Time">
+                1.0h
+              </span>
+            </div>
+          </div>
+          <div class="tsk-Background">
+            <span class="tsk-Content">
+              モデル設計・実装
+            </span>
+            <div class="tsk-Footer">
+              <div class="tsk-Workers">
+                <%= image_tag 'mob_c.png', class: 'usr-Avatar-xs' %>
+                <%= image_tag 'mob_d.png', class: 'usr-Avatar-xs' %>
+                <%= image_tag 'mob_e.png', class: 'usr-Avatar-xs' %>
+              </div>
+              <span class="tsk-Time">
+                2.5h
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

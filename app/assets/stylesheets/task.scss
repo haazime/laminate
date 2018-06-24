@@ -1,0 +1,29 @@
+.tsk-Background {
+  @include card;
+  @include padding-base;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  width: 100%;
+  margin-bottom: .5rem;
+  background-color: $yellow;
+}
+
+.tsk-Content {
+  @include nf;
+  display: block;
+}
+
+.tsk-Footer {
+  @extend .d-flex, .align-items-center;
+  margin-top: .5rem;
+}
+
+.tsk-Time {
+  @extend .d-flex, .align-items-center;
+  @extend .ml-auto;
+  height: 1.5rem;
+  padding: 0 .5rem;
+  background-color: rgba(255,255,255,.7);
+  font-weight: bold;
+  border-radius: $font-size-base;
+}

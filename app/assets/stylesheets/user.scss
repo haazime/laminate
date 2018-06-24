@@ -6,6 +6,10 @@
   &:last-child { margin-right: 0 }
 }
 
+.usr-Avatar-xs {
+  @include circle(1.5rem);
+}
+
 .usr-Avatar-sm {
   @include circle(1.75rem);
 }
