@@ -1,10 +1,16 @@
+.kb-Board {
+  @include card;
+  background-color: $white;
+  padding: 0 .25rem .5rem;
+}
+
 .kb-Row {
   @extend .d-flex;
   width: 100%;
 }
 
-.kb-Row-mb {
-  margin-bottom: .5rem;
+.kb-Row-Header {
+  padding: .5rem 0;
 }
 
 .kb-Column {
