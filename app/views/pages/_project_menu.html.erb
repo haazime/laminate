@@ -43,6 +43,28 @@
     <% end -%>
   </div>
   <div class="col-lg-8">
+    <%= link_to page_url(:teration), class: 'prj-MenuItem' do %>
+      <div class="prj-MenuItem_Header">
+        <h3 class="prj-MenuItem_Title">
+          イテレーション
+        </h3>
+      </div>
+      <div class="prj-MenuItem_Body">
+        <i class="prj-Icon prj-Icon_Iteration"></i>
+        <ul class="prj-MenuItem_Help">
+          <li>
+            イテレーションの開始
+          </li>
+          <li>
+            イテレーションの終了
+          </li>
+        </ul>
+      </div>
+    <% end -%>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-8">
     <%= link_to page_url(:release_plan), class: 'prj-MenuItem' do %>
       <div class="prj-MenuItem_Header">
         <h3 class="prj-MenuItem_Title">
@@ -62,9 +84,7 @@
       </div>
     <% end -%>
   </div>
-</div>
-<div class="row">
-  <div class="col-lg-8 offset-lg-4">
+  <div class="col-lg-8">
     <%= link_to page_url(:product_backlog), class: 'prj-MenuItem' do %>
       <div class="prj-MenuItem_Header">
         <h3 class="prj-MenuItem_Title">
