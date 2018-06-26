@@ -10,6 +10,10 @@
   @extend .fa, .fa-cog;
 }
 
+.icon-time {
+  @extend .fa, .fa-clock-o;
+}
+
 .icon-Check {
   font-size: 1.5rem;
 }

@@ -74,14 +74,39 @@
                 </span>
               </div>
             </div>
-            <div class="tsk-Background tsk-Background-add">
-              <div class="tsk-Add">
-                <%= link_to '#', class: 'btn btn-sm btn-success' do -%>
-                  <i class="icon-Prefix icon-Add"></i>
-                  タスクを追加する
-                <% end -%>
+            <% if params[:mode] == 'new' -%>
+              <div class="tsk-Background tsk-Background-new">
+                <form>
+                  <input type="text" class="form-control" placeholder="タスクを入力...">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="icon-time"></i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        h
+                      </span>
+                    </div>
+                  </div>
+                  <button class="btn btn-sm btn-success">
+                    <i class="icon-Add"></i>
+                    追加する
+                  </button>
+                </form>
               </div>
-            </div>
+            <% else -%>
+              <div class="tsk-Background tsk-Background-mock">
+                <div class="tsk-Mock">
+                  <%= link_to page_url(id: :task_kanban, mode: :new), class: 'btn btn-sm btn-success' do -%>
+                    <i class="icon-Prefix icon-Add"></i>
+                    タスクを追加する
+                  <% end -%>
+                </div>
+              </div>
+            <% end -%>
           </div>
           <div class="kb-Column">
             <div class="tsk-Background">
