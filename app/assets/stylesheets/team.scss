@@ -14,3 +14,30 @@
   @include nf;
   margin: 1rem 0;
 }
+
+.tm-Member {
+  @extend .d-flex, .align-items-center;
+  margin-bottom: .5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tm-Member_Name {
+  @include nf;
+  margin-left: .75rem;
+  font-size: $font-size-lg;
+  font-weight: bold;
+}
+
+.tm-Member_Role {
+  @extend .ml-auto;
+  display: inline-block;
+  padding: 0 .5rem;
+  font-size: $font-size-sm;
+  border-radius: $font-size-base;
+  background-color: $white;
+  color: $gray-700;
+  border: 1px solid $gray-700;
+}

@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="breadcrumbs">
+    <%= link_to 'Leave me alone!', page_url(:show_project) -%>
+    <span class="current">
+      チーム
+    </span>
+  </div>
+</div>
+<div class="row sw-Main">
+  <div class="col-lg-14 mx-auto">
+    <div class="sw-Section">
+      <div class="sw-Section_Header">
+        <h2 class="sw-Section_Title">
+          このプロジェクトのメンバー
+        </h2>
+      </div>
+      <div class="sw-Section_Body">
+        <div class="tm-MemberList">
+          <div class="tm-Member">
+            <%= image_tag 'mob_a.png', class: 'usr-Avatar-md' %>
+            <span class="tm-Member_Name">
+              末吉 哉
+            </span>
+            <span class="tm-Member_Role">
+              プロダクトオーナー
+            </span>
+          </div>
+          <div class="tm-Member">
+            <%= image_tag 'mob_b.png', class: 'usr-Avatar-md' %>
+            <span class="tm-Member_Name">
+              末吉 哉
+            </span>
+            <span class="tm-Member_Role">
+              開発者
+            </span>
+          </div>
+          <div class="tm-Member">
+            <%= image_tag 'mob_c.png', class: 'usr-Avatar-md' %>
+            <span class="tm-Member_Name">
+              末吉 哉
+            </span>
+            <span class="tm-Member_Role">
+              開発者
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sw-Section">
+      <div class="sw-Section_Header">
+        <h2 class="sw-Section_Title">
+          メンバーを招待
+        </h2>
+      </div>
+      <div class="sw-Section_Body">
+        <p class="sw-Subtext mb-2">
+          このURLを招待する人に共有してください。
+        </p>
+        <input type="text" value="http://location.to.join.team" class="form-control">
+      </div>
+    </div>
+  </div>
+</div>
