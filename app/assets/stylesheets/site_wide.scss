@@ -57,6 +57,10 @@
   @include heading;
   font-size: $font-size-base;
   color: $gray-600;
+
+  &:before {
+    @include fa-content('\f1db');
+  }
 }
 
 .sw-Section_Body {
