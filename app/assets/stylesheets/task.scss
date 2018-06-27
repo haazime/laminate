@@ -12,6 +12,16 @@
   }
 }
 
+.tsk-Background-mock {
+  height: 4.8rem;
+  background-color: lighten($yellow, 8%);
+  border: 3px dashed $gray-200;
+}
+
+.tsk-Background-new {
+  padding: .5rem;
+}
+
 .tsk-Content {
   @include nf;
   display: block;
@@ -32,13 +42,7 @@
   border-radius: $font-size-base;
 }
 
-.tsk-Background-add {
-  height: 4.8rem;
-  background-color: lighten($yellow, 8%);
-  border: 3px dashed $gray-200;
-}
-
-.tsk-Add {
+.tsk-Mock {
   @extend .d-flex, .align-items-center, .justify-content-center;
   height: 100%;
 }
@@ -47,4 +51,24 @@
   @extend .fa, .fa-user-circle-o;
   color: theme-color('success');
   font-size: 1.375rem;
+}
+
+.tsk-Form_Group {
+  @extend .d-flex, .align-items-center;
+  margin: .25rem 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tsk-Form_Multiple {
+  @extend .fa, .fa-times;
+  margin: 0 .5rem;
+  font-size: $font-size-lg;
+  color: $gray-800;
+}
+
+.tsk-Input_NOP {
+  width: 3rem !important;
 }

@@ -7,7 +7,7 @@
   </div>
 </div>
 <div class="row sw-Main">
-  <div class="col-lg-20 mx-auto">
+  <div class="col-lg-22 mx-auto">
     <div class="kb-Container">
       <div class="fe-Background">
         <div class="fe-Summary_Body">
@@ -74,14 +74,46 @@
                 </span>
               </div>
             </div>
-            <div class="tsk-Background tsk-Background-add">
-              <div class="tsk-Add">
-                <%= link_to '#', class: 'btn btn-sm btn-success' do -%>
-                  <i class="icon-Prefix icon-Add"></i>
-                  タスクを追加する
-                <% end -%>
+            <% if params[:mode] == 'new' -%>
+              <div class="tsk-Background tsk-Background-new">
+                <form>
+                  <input type="text" class="form-control" placeholder="タスクを入力...">
+                  <div class="tsk-Form_Group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="icon-time"></i>
+                        </span>
+                      </div>
+                      <input type="number" class="form-control" min="0" max="16" step="0.5" value="0.0">
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          h
+                        </span>
+                      </div>
+                    </div>
+                    <i class="tsk-Form_Multiple"></i>
+                    <input type="number" class="form-control tsk-Input_NOP" min="1" value="1">
+                  </div>
+                  <div class="tsk-Form_Group frm-Actions">
+                    <button class="btn btn-sm btn-success">
+                      <i class="icon-Add"></i>
+                      追加する
+                    </button>
+                    <%= link_to 'キャンセル', page_url(:task_kanban), class: 'frm-Action_Cancel frm-Action_Cancel-sm' %>
+                  </div>
+                </form>
               </div>
-            </div>
+            <% else -%>
+              <div class="tsk-Background tsk-Background-mock">
+                <div class="tsk-Mock">
+                  <%= link_to page_url(id: :task_kanban, mode: :new), class: 'btn btn-sm btn-success' do -%>
+                    <i class="icon-Prefix icon-Add"></i>
+                    タスクを追加する
+                  <% end -%>
+                </div>
+              </div>
+            <% end -%>
           </div>
           <div class="kb-Column">
             <div class="tsk-Background">
