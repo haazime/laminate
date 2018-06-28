@@ -69,9 +69,11 @@
                     <i class="icon-Prefix tsk-SignUp_Icon"></i>
                   <% end -%>
                 </div>
-                <span class="tsk-Time">
+                <div class="tsk-Estimation">
                   0.5h
-                </span>
+                  &times;
+                  1
+                </div>
               </div>
             </div>
             <% if params[:mode] == 'new' -%>
@@ -79,10 +81,10 @@
                 <form>
                   <input type="text" class="form-control" placeholder="タスクを入力...">
                   <div class="tsk-Form_Group">
-                    <div class="input-group">
+                    <div class="input-group tsk-Input_Time">
                       <div class="input-group-prepend">
                         <span class="input-group-text">
-                          <i class="icon-time"></i>
+                          <i class="icon-Time"></i>
                         </span>
                       </div>
                       <input type="number" class="form-control" min="0" max="16" step="0.5" value="0.0">
@@ -92,8 +94,17 @@
                         </span>
                       </div>
                     </div>
-                    <i class="tsk-Form_Multiple"></i>
-                    <input type="number" class="form-control tsk-Input_NOP" min="1" value="1">
+                    <span class="tsk-Input_Multiplier">
+                      &times;
+                    </span>
+                    <div class="input-group tsk-Input_NOP">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="icon-Person"></i>
+                        </span>
+                      </div>
+                      <input type="number" class="form-control" min="1" max="10" value="1">
+                    </div>
                   </div>
                   <div class="tsk-Form_Group frm-Actions">
                     <button class="btn btn-sm btn-success">
@@ -127,9 +138,11 @@
                 <div class="tsk-Workers">
                   <%= image_tag 'mob_b.png', class: 'usr-Avatar-xs' %>
                 </div>
-                <span class="tsk-Time">
+                <div class="tsk-Estimation">
                   1.5h
-                </span>
+                  &times;
+                  1
+                </div>
               </div>
             </div>
             <div class="tsk-Background">
@@ -144,9 +157,11 @@
                   <%= image_tag 'mob_a.png', class: 'usr-Avatar-xs' %>
                   <%= image_tag 'mob_d.png', class: 'usr-Avatar-xs' %>
                 </div>
-                <span class="tsk-Time">
+                <div class="tsk-Estimation">
                   3.0h
-                </span>
+                  &times;
+                  2
+                </div>
               </div>
             </div>
           </div>
@@ -164,9 +179,11 @@
                   <%= image_tag 'mob_b.png', class: 'usr-Avatar-xs' %>
                   <%= image_tag 'mob_c.png', class: 'usr-Avatar-xs' %>
                 </div>
-                <span class="tsk-Time">
+                <div class="tsk-Estimation">
                   1.0h
-                </span>
+                  &times;
+                  3
+                </div>
               </div>
             </div>
             <div class="tsk-Background">
@@ -182,9 +199,11 @@
                   <%= image_tag 'mob_d.png', class: 'usr-Avatar-xs' %>
                   <%= image_tag 'mob_e.png', class: 'usr-Avatar-xs' %>
                 </div>
-                <span class="tsk-Time">
+                <div class="tsk-Estimation">
                   2.5h
-                </span>
+                  &times;
+                  3
+                </div>
               </div>
             </div>
           </div>
