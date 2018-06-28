@@ -10,8 +10,12 @@
   @extend .fa, .fa-cog;
 }
 
-.icon-time {
+.icon-Time {
   @extend .fa, .fa-clock-o;
+}
+
+.icon-Person {
+  @extend .fa, .fa-user-circle;
 }
 
 .icon-Check {
