@@ -6,19 +6,20 @@
           あなたのプロジェクト
         </h2>
       </div>
-      <div class="sw-Section_Body">
-        <div class="d-flex">
-          <ul class="sw-List">
-            <li>
-              <%= link_to 'Leave me alone!', page_url(:show_project), class: 'sw-Strong' %>
-            </li>
-            <li>
-              <%= link_to 'Laminate', '#', class: 'sw-Strong' %>
-            </li>
-          </ul>
+      <div class="sw-Section_Body sw-Section_Body-thin">
+        <ul class="sw-List">
+          <li>
+            <%= link_to 'Leave me alone!', page_url(:show_project), class: 'sw-Strong' %>
+          </li>
+          <li>
+            <%= link_to 'Laminate', '#', class: 'sw-Strong' %>
+          </li>
+        </ul>
+        <div class="sw-Section_Footer">
           <div class="ml-auto">
-            <%= link_to page_url(:new_project), class: 'btn btn-success' do %>
-              <i class="icon-Add"></i>
+            <%= link_to page_url(:new_project), class: 'btn btn-sm btn-success' do %>
+              <i class="icon-Prefix icon-Add"></i>
+              プロジェクトを追加する
             <% end -%>
           </div>
         </div>
