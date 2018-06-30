@@ -1,0 +1,15 @@
+<% content_for(:body_bg_class) { 'pub-Background' } %>
+<div class="row">
+  <div class="col-lg-8 mx-auto">
+    <div class="pub-Container_SignIn">
+      <h1 class="pub-AppName">
+        Laminate
+      </h1>
+      <%= link_to 'Googleでログイン', '/auth/google_oauth2', class: 'pub-Button_SignIn' %>
+      <span class="pub-Divider">
+        ユーザー登録がまだの場合は
+      </span>
+      <%= link_to 'Googleでユーザー登録', '/auth/google_oauth2', class: 'pub-Button_SignUp' %>
+    </div>
+  </div>
+</div>
