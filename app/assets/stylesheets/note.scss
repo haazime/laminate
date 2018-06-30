@@ -1,0 +1,8 @@
+.nt-Body {
+  @include nf;
+  font-size: $font-size-base;
+
+  ul {
+    margin-bottom: 0;
+  }
+}

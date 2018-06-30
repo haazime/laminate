@@ -80,28 +80,20 @@
   margin-bottom: -0.125rem;
 }
 
-.fe-AcceptanceCriteria {
-  background-color: lighten($gray-100, 3%);
+.fe-Note {
+  @include padding-base;
   margin-top: 1rem;
-  padding: 1rem;
+  padding-bottom: 1rem;
+  background-color: $gray-100;
   border-radius: .3rem;
 }
 
-.fe-AcceptanceCriteria_Title {
-  font-size: $font-size-sm;
+.fe-Note_Header {
+  margin: .25rem 0;
+}
+
+.fe-Note_Title {
+  @include heading;
+  font-size: $font-size-base;
   color: $secondary;
-}
-
-.fe-AcceptanceCriteria_Body {
-  margin: .75rem 0;
-}
-
-.fe-AcceptanceCriterion {
-  @extend .d-flex, .align-items-center;
-  margin-bottom: .325rem;
-}
-
-.fe-AcceptanceCriterion_Content {
-  @include nf;
-  margin-left: .5rem;
 }
