@@ -1,3 +1,16 @@
+GIT
+  remote: https://github.com/haazime/oblate.git
+  revision: 67c3fbe1e9b9ac7835150f9de62160bcb08bfafe
+  specs:
+    oblate (0.1.0)
+
+GIT
+  remote: https://github.com/haazime/omniauth_test_helper.git
+  revision: a00547707253dfd6f3a950db2392ca770e95f761
+  specs:
+    omniauth_test_helper (0.1.0)
+      activesupport (>= 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -243,8 +256,10 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
+  oblate!
   omniauth
   omniauth-google-oauth2
+  omniauth_test_helper!
   pg (>= 0.18, < 2.0)
   popper_js (~> 1.12.9)
   puma (~> 3.11)

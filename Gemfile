@@ -40,6 +40,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'dotenv-rails'
   gem 'capybara'
+  gem 'omniauth_test_helper', github: 'haazime/omniauth_test_helper'
 end
 
 group :development do
@@ -57,6 +58,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem 'oblate', github: 'haazime/oblate'
 gem 'chartkick'
 
 gem 'bootstrap', '~> 4.0.0'
