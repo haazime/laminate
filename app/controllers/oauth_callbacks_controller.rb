@@ -1,7 +1,7 @@
 class OauthCallbacksController < ApplicationController
 
   def create
-    result = SignUpByOAuthCommand.run(auth_hash)
+    result = SignUpByOauthCommand.run(auth_hash)
     if result.succeeded?
       sign_in(result.user_id)
       redirect_to root_url
