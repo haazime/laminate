@@ -1,9 +1,10 @@
 class OauthCallbacksController < ApplicationController
 
   def create
-    sign_up_or_find_user(auth_hash) do |user_id, flash|
+    user_id = sign_up_or_find_user(auth_hash)
+    if user_id
       sign_in(user_id)
-      redirect_to root_url, flash
+      redirect_to root_url, notice: t('navs.sign_in.succeeded')
     end
   end
 
@@ -11,14 +12,14 @@ class OauthCallbacksController < ApplicationController
 
     def sign_up_or_find_user(auth_hash, &block)
       user = Apps::User.find_by_oauth_account(auth_hash['provider'], auth_hash['uid'])
-      return yield(user.id, notice: t('navs.sign_in.succeeded')) if user
-      sign_up(auth_hash, &block)
+      return user.id if user
+      sign_up(auth_hash)
     end
 
     def sign_up(auth_hash)
       result = SignUpByOauthCommand.run(auth_hash)
-      return yield(nil, alert: t('navs.sign_up.failed')) unless result.succeeded?
-      yield(result.user_id, notice: t('navs.sign_up.succeeded'))
+      return nil unless result.succeeded?
+      result.user_id
     end
 
     def auth_hash

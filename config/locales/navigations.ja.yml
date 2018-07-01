@@ -1,8 +1,5 @@
 ja:
   navs:
-    sign_up:
-      succeeded: Welcome to Lamiate!
-      failed: もう一度お試しください
     sign_in:
       succeeded: ログインしました
       failed: もう一度お試しください
