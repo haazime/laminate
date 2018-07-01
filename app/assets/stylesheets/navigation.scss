@@ -39,3 +39,48 @@ a.btn,
     color: $gray-900;
   }
 }
+
+#flash {
+  position: fixed;
+  top: 33vh;
+  left: 50%;
+  z-index: 999999;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.fl-Block {
+  @extend .d-flex, .align-items-center;
+  padding: .5rem 1rem .5rem 1.25rem;
+  border-radius: 7rem;
+  background-color: rgba(0,0,0,.7);
+}
+
+@mixin fl-block-color($color) {
+  color: $color;
+}
+
+.fl-Block-success {
+  @include fl-block-color(theme-color('success'));
+}
+
+.fl-Block-danger {
+  @include fl-block-color(theme-color('danger'));
+}
+
+.fl-Message {
+  font-size: $font-size-lg;
+  margin-right: .75rem;
+}
+
+.fl-Close {
+  font-size: $font-size-lg;
+  font-weight: bold;
+  color: $gray-600;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $gray-400;
+  }
+}

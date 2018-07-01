@@ -1,0 +1,16 @@
+<div id="js-flash">
+  <% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) -%>
+      <% alert_type = name == 'notice' ? 'success' : 'danger' %>
+      <% timeout = name == 'notice' ? 2500 : 60000 %>
+      <div id="flash" data-controller="flash" data-flash-timeout="<%= timeout %>" class="fl-Block fl-Block-<%= alert_type %> alert fade show alert-dismissible" role="alert">
+        <span class="fl-Message" data-dismiss="alert">
+          <%= msg %>
+        </span>
+        <a href="#" class="fl-Close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </a>
+      </div>
+    <% end -%>
+  <% end %>
+</div>

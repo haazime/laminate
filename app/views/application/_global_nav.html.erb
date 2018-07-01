@@ -4,8 +4,8 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
-    <% if current_user -%>
+    <% if signed_in? -%>
       <%= render 'user_menu' %>
-    <% end -%>
+    <% end %>
   </div>
 </nav>

@@ -1,0 +1,35 @@
+class OauthCallbacksController < ApplicationController
+  before_action :require_guest
+
+  def create
+    user_id = sign_up_or_find_user(auth_hash)
+    if user_id
+      sign_in(user_id)
+      redirect_to root_url, notice: t('navs.sign_in.succeeded')
+    end
+  end
+
+  private
+
+    def require_guest
+      if signed_in?
+        redirect_to root_url, notice: t('navs.sign_in.already_signed_in')
+      end
+    end
+
+    def sign_up_or_find_user(auth_hash, &block)
+      user = Apps::User.find_by_oauth_account(auth_hash['provider'], auth_hash['uid'])
+      return user.id if user
+      sign_up(auth_hash)
+    end
+
+    def sign_up(auth_hash)
+      result = SignUpByOauthCommand.run(auth_hash)
+      return nil unless result.succeeded?
+      result.user_id
+    end
+
+    def auth_hash
+      request.env['omniauth.auth']
+    end
+end
