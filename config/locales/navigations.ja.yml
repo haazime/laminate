@@ -4,6 +4,3 @@ ja:
     already_signed_in: ログインしています
     signed_out: ログアウトしました
     require_user: ログインしてください
-    sign_in:
-      succeeded: ログインしました
-      already_signed_in: ログインしています
