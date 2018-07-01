@@ -1,17 +1,19 @@
 module SignInHelper
+  KEY = :user_id
+
   protected
 
     def sign_in(user_id)
       return unless user_id
-      cookies.signed[:user_id] = user_id
+      cookies.signed[KEY] = user_id
     end
 
     def sign_out
-      cookies.delete(:user_id)
+      cookies.delete(KEY)
     end
 
     def current_user
-      @__current_user ||= fetch_user(cookies.signed[:user_id])
+      @__current_user ||= fetch_user(cookies.signed[KEY])
     end
 
     def signed_in?
