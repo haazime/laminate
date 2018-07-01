@@ -3,6 +3,8 @@ require 'rails_helper'
 describe 'Sign in' do
   context 'when signed up' do
     it do
+      sign_up # other user
+
       auth_hash = mock_auth_hash
       sign_up(auth_hash)
 
