@@ -40,11 +40,25 @@ module OauthSupport
       follow_redirect!
     end
   end
+
+  module System
+    def sign_in(user)
+      set_auth_hash_from_user(user)
+      visit new_session_path
+      click_on 'Googleでログイン'
+    end
+
+    def sign_out
+      find('#app_user_menu').click
+      find('#app_sign_out').click
+    end
+  end
 end
 
 RSpec.configure do |c|
   c.include OauthSupport::Common
   c.include OauthSupport::Request, type: :request
+  c.include OauthSupport::System, type: :system
 end
 
 OmniAuth.config.test_mode = true
