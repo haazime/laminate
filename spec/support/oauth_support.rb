@@ -2,13 +2,28 @@ require 'omniauth_test_helper'
 require 'securerandom'
 
 module OauthSupport
-  def set_auth_hash(auth_hash)
-    OmniAuth.config.add_mock(auth_hash['provider'].to_sym, auth_hash)
+  module Common
+    def set_auth_hash(auth_hash)
+      OmniAuth.config.add_mock(auth_hash['provider'].to_sym, auth_hash)
+    end
+  end
+
+  module Request
+    include Common
+
+    def oauth_sign_in(auth_hash)
+      set_auth_hash(auth_hash)
+
+      get '/auth/google_oauth2'
+      follow_redirect!
+      follow_redirect!
+    end
   end
 end
 
 RSpec.configure do |c|
-  c.include OauthSupport
+  c.include OauthSupport::Common
+  c.include OauthSupport::Request, type: :request
 end
 
 OmniAuth.config.test_mode = true

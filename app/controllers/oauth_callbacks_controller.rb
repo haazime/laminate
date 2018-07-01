@@ -1,4 +1,5 @@
 class OauthCallbacksController < ApplicationController
+  before_action :require_guest
 
   def create
     user_id = sign_up_or_find_user(auth_hash)
@@ -9,6 +10,12 @@ class OauthCallbacksController < ApplicationController
   end
 
   private
+
+    def require_guest
+      if signed_in?
+        redirect_to root_url, notice: t('navs.sign_in.already_signed_in')
+      end
+    end
 
     def sign_up_or_find_user(auth_hash, &block)
       user = Apps::User.find_by_oauth_account(auth_hash['provider'], auth_hash['uid'])

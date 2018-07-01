@@ -5,11 +5,8 @@ describe 'Sign in' do
     it do
       auth_hash = mock_auth_hash
       SignUpByOauthCommand.run(auth_hash)
-      set_auth_hash(auth_hash)
 
-      get '/auth/google_oauth2'
-      follow_redirect!
-      follow_redirect!
+      oauth_sign_in(auth_hash)
 
       aggregate_failures do
         expect(response.body).to include(I18n.t('navs.sign_in.succeeded'))

@@ -3,3 +3,4 @@ ja:
     sign_in:
       succeeded: ログインしました
       failed: もう一度お試しください
+      already_signed_in: ログインしています
