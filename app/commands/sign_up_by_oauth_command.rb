@@ -13,6 +13,6 @@ class SignUpByOauthCommand < ApplicationCommand
   rescue
     failure
   else
-    success
+    success(user_id: user.id)
   end
 end

@@ -11,7 +11,7 @@ describe SignUpByOauthCommand do
         expect(r).to be_succeeded
 
         user = Apps::User.find_by_oauth_account(auth_hash['provider'], auth_hash['uid'])
-        expect(user).to eq(Apps::User.last)
+        expect(user).to eq(Apps::User.find(r.user_id))
 
         expect(user.name).to eq(auth_hash['info']['name'])
         expect(user.email).to eq(auth_hash['info']['email'])
