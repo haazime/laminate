@@ -2,10 +2,9 @@ class Apps::User < ApplicationRecord
   has_one :oauth_account
 
   class << self
-    def create_with_oauth_account!(user_params, oauth_account_params)
+    def new_with_oauth_account(user_params, oauth_account_params)
       new(user_params) do |u|
         u.build_oauth_account(oauth_account_params)
-        u.save!
       end
     end
 
