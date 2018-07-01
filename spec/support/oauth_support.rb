@@ -11,6 +11,7 @@ module OauthSupport
       user_id = SignUpByOauthCommand.run!(auth_hash).user_id
       Apps::User.find(user_id)
     end
+    alias_method :sign_up, :oauth_sign_up
   end
 
   module Request
@@ -23,6 +24,7 @@ module OauthSupport
       follow_redirect!
       follow_redirect!
     end
+    alias_method :sign_in, :oauth_sign_in
   end
 end
 
