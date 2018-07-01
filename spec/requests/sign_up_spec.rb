@@ -10,7 +10,10 @@ describe 'Sign up' do
       follow_redirect!
       follow_redirect!
 
-      expect(response.body).to include(auth_hash['info']['name'])
+      aggregate_failures do
+        expect(response.body).to include(I18n.t('navs.sign_up.succeeded'))
+        expect(response.body).to include(auth_hash['info']['name'])
+      end
     end
   end
 end

@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protected
 
     def sign_in(user_id)
+      return unless user_id
       cookies.signed[:user_id] = user_id
     end
 
