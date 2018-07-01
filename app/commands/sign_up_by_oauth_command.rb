@@ -10,6 +10,9 @@ class SignUpByOauthCommand < ApplicationCommand
         u.build_oauth_account(provider: auth_hash['provider'], uid: auth_hash['uid'])
       end
     user.save!
+  rescue
+    failure
+  else
     success
   end
 end
