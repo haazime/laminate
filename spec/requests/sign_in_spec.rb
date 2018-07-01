@@ -5,7 +5,7 @@ describe 'Sign in' do
     it do
       auth_hash = mock_auth_hash
       SignUpByOauthCommand.run(auth_hash)
-      OmniAuth.config.add_mock(auth_hash['provider'].to_sym, auth_hash)
+      set_auth_hash(auth_hash)
 
       get '/auth/google_oauth2'
       follow_redirect!
