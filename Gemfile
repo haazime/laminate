@@ -39,8 +39,6 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.7'
   gem 'dotenv-rails'
-  gem 'capybara'
-  gem 'omniauth_test_helper', github: 'haazime/omniauth_test_helper'
 end
 
 group :development do
@@ -53,8 +51,18 @@ group :development do
   gem 'spring-commands-rspec'
 end
 
+group :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+  gem 'simplecov', require: false
+  gem 'omniauth_test_helper', github: 'haazime/omniauth_test_helper'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'webpacker', '~> 3.5'
 
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
