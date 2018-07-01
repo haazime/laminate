@@ -7,6 +7,13 @@ module OauthSupport
       OmniAuth.config.add_mock(auth_hash['provider'].to_sym, auth_hash)
     end
 
+    def set_auth_hash_from_user(user)
+      set_auth_hash(
+        'provider' => user.oauth_account.provider,
+        'uid' => user.oauth_account.uid
+      )
+    end
+
     def oauth_sign_up(auth_hash = mock_auth_hash)
       user_id = SignUpByOauthCommand.run!(auth_hash).user_id
       Apps::User.find(user_id)
@@ -19,19 +26,15 @@ module OauthSupport
 
     def oauth_sign_in(auth_hash)
       set_auth_hash(auth_hash)
-
-      get '/auth/google_oauth2'
-      follow_redirect!
-      follow_redirect!
+      request_oauth_sign_in
     end
 
     def sign_in(user)
-      auth_hash = {
-        'provider' => user.oauth_account.provider,
-        'uid' => user.oauth_account.uid
-      }
-      set_auth_hash(auth_hash)
+      set_auth_hash_from_user(user)
+      request_oauth_sign_in
+    end
 
+    def request_oauth_sign_in
       get '/auth/google_oauth2'
       follow_redirect!
       follow_redirect!
