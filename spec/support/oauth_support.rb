@@ -6,6 +6,11 @@ module OauthSupport
     def set_auth_hash(auth_hash)
       OmniAuth.config.add_mock(auth_hash['provider'].to_sym, auth_hash)
     end
+
+    def oauth_sign_up(auth_hash = mock_auth_hash)
+      user_id = SignUpByOauthCommand.run!(auth_hash).user_id
+      Apps::User.find(user_id)
+    end
   end
 
   module Request
