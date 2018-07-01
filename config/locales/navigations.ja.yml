@@ -1,6 +1,9 @@
 ja:
   navs:
+    signed_in: ログインしました
+    already_signed_in: ログインしています
+    signed_out: ログアウトしました
+    require_user: ログインしてください
     sign_in:
       succeeded: ログインしました
-      failed: もう一度お試しください
       already_signed_in: ログインしています

@@ -24,7 +24,18 @@ module OauthSupport
       follow_redirect!
       follow_redirect!
     end
-    alias_method :sign_in, :oauth_sign_in
+
+    def sign_in(user)
+      auth_hash = {
+        'provider' => user.oauth_account.provider,
+        'uid' => user.oauth_account.uid
+      }
+      set_auth_hash(auth_hash)
+
+      get '/auth/google_oauth2'
+      follow_redirect!
+      follow_redirect!
+    end
   end
 end
 

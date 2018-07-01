@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
       cookies.signed[:user_id] = user_id
     end
 
+    def sign_out
+      cookies.delete(:user_id)
+    end
+
     def current_user
       @__current_user ||= fetch_user(cookies.signed[:user_id])
     end

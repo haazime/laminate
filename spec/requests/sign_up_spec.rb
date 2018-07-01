@@ -16,6 +16,7 @@ describe 'Sign up' do
   context 'when signed in' do
     it do
       auth_hash = mock_auth_hash
+      sign_up(auth_hash)
       oauth_sign_in(auth_hash)
 
       oauth_sign_in(auth_hash)
