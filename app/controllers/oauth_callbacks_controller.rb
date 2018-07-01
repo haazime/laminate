@@ -11,12 +11,6 @@ class OauthCallbacksController < ApplicationController
 
   private
 
-    def require_guest
-      if signed_in?
-        redirect_to root_url, notice: t('navs.already_signed_in')
-      end
-    end
-
     def sign_up_or_find_user(auth_hash, &block)
       user = Apps::User.find_by_oauth_account(auth_hash['provider'], auth_hash['uid'])
       return user.id if user
