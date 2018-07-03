@@ -46,6 +46,7 @@ module OauthSupport
       set_auth_hash_from_user(user)
       visit new_session_path
       click_on 'Googleでログイン'
+      find('#app_user_menu')
     end
 
     def sign_out
