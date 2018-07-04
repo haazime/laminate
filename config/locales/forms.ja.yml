@@ -1,0 +1,6 @@
+ja:
+  activemodel:
+    attributes:
+
+      new_project_form:
+        name: プロジェクト名
