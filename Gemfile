@@ -68,6 +68,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'oblate', github: 'haazime/oblate'
 gem 'chartkick'
+gem 'gretel'
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
