@@ -13,6 +13,9 @@
     <%= render 'flash' %>
     <%= render 'global_nav' %>
     <div class="container">
+      <div class="row">
+        <%= breadcrumbs separator: '' %>
+      </div>
       <%= yield %>
     </div>
   </body>
