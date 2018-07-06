@@ -15,17 +15,17 @@ ActiveRecord::Schema.define(version: 2018_07_01_011529) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "apps_oauth_accounts", force: :cascade do |t|
+  create_table "app_oauth_accounts", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "provider", null: false
     t.string "uid", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["provider", "uid"], name: "index_apps_oauth_accounts_on_provider_and_uid", unique: true
-    t.index ["user_id"], name: "index_apps_oauth_accounts_on_user_id"
+    t.index ["provider", "uid"], name: "index_app_oauth_accounts_on_provider_and_uid", unique: true
+    t.index ["user_id"], name: "index_app_oauth_accounts_on_user_id"
   end
 
-  create_table "apps_users", force: :cascade do |t|
+  create_table "app_users", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
     t.string "avatar_url", null: false
@@ -33,5 +33,5 @@ ActiveRecord::Schema.define(version: 2018_07_01_011529) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "apps_oauth_accounts", "apps_users", column: "user_id"
+  add_foreign_key "app_oauth_accounts", "app_users", column: "user_id"
 end

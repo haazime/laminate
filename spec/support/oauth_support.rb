@@ -16,7 +16,7 @@ module OauthSupport
 
     def oauth_sign_up(auth_hash = mock_auth_hash)
       user_id = SignUpByOauthCommand.run!(auth_hash).user_id
-      Apps::User.find(user_id)
+      App::User.find(user_id)
     end
     alias_method :sign_up, :oauth_sign_up
   end

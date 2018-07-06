@@ -22,6 +22,6 @@ module SignInHelper
 
     def fetch_user(user_id = nil)
       return nil unless user_id
-      Apps::User.find_by(id: user_id)
+      App::User.find_by(id: user_id)
     end
 end
