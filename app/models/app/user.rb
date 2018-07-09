@@ -12,4 +12,7 @@ class App::User < ApplicationRecord
       joins(:oauth_account).find_by(app_oauth_accounts: { provider: provider, uid: uid })
     end
   end
+
+  def add_project_member(project_member)
+  end
 end
