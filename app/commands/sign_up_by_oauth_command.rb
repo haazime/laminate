@@ -12,7 +12,7 @@ class SignUpByOauthCommand < ApplicationCommand
   private
 
     def new_user(auth_hash)
-      Apps::User.new_with_oauth_account(
+      App::User.new_with_oauth_account(
         {
           name: auth_hash['info']['name'],
           email: auth_hash['info']['email'],

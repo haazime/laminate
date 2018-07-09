@@ -1,4 +1,4 @@
-class Apps::User < ApplicationRecord
+class App::User < ApplicationRecord
   has_one :oauth_account
 
   class << self
@@ -9,7 +9,7 @@ class Apps::User < ApplicationRecord
     end
 
     def find_by_oauth_account(provider, uid)
-      joins(:oauth_account).find_by(apps_oauth_accounts: { provider: provider, uid: uid })
+      joins(:oauth_account).find_by(app_oauth_accounts: { provider: provider, uid: uid })
     end
   end
 end

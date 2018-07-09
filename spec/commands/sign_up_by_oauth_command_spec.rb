@@ -10,8 +10,8 @@ describe SignUpByOauthCommand do
       aggregate_failures do
         expect(r).to be_succeeded
 
-        user = Apps::User.find_by_oauth_account(auth_hash['provider'], auth_hash['uid'])
-        expect(user).to eq(Apps::User.find(r.user_id))
+        user = App::User.find_by_oauth_account(auth_hash['provider'], auth_hash['uid'])
+        expect(user).to eq(App::User.find(r.user_id))
 
         expect(user.name).to eq(auth_hash['info']['name'])
         expect(user.email).to eq(auth_hash['info']['email'])
@@ -23,8 +23,8 @@ describe SignUpByOauthCommand do
       auth_hash = mock_auth_hash
 
       expect { described_class.run(auth_hash) }
-        .to change { Apps::User.count }.by(1)
-        .and change { Apps::OauthAccount.count }.by(1)
+        .to change { App::User.count }.by(1)
+        .and change { App::OauthAccount.count }.by(1)
     end
   end
 
@@ -45,8 +45,8 @@ describe SignUpByOauthCommand do
       described_class.run(auth_hash)
 
       expect { described_class.run(auth_hash) }
-        .to change { Apps::User.count }.by(0)
-        .and change { Apps::OauthAccount.count }.by(0)
+        .to change { App::User.count }.by(0)
+        .and change { App::OauthAccount.count }.by(0)
     end
   end
 end

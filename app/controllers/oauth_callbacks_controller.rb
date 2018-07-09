@@ -12,7 +12,7 @@ class OauthCallbacksController < ApplicationController
   private
 
     def sign_up_or_find_user(auth_hash, &block)
-      user = Apps::User.find_by_oauth_account(auth_hash['provider'], auth_hash['uid'])
+      user = App::User.find_by_oauth_account(auth_hash['provider'], auth_hash['uid'])
       return user.id if user
       sign_up(auth_hash)
     end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Apps::User, type: :model do
+RSpec.describe App::User, type: :model do
   it do
     user = described_class.new_with_oauth_account(
       {
