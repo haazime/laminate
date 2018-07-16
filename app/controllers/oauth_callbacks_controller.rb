@@ -18,7 +18,7 @@ class OauthCallbacksController < ApplicationController
     end
 
     def sign_up(auth_hash)
-      result = SignUpByOauthCommand.run(auth_hash)
+      result = PersonService.sign_up_by_oauth(auth_hash)
       return nil unless result.succeeded?
       result.person_id
     end

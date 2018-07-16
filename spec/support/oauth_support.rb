@@ -15,7 +15,7 @@ module OauthSupport
     end
 
     def oauth_sign_up(auth_hash = mock_auth_hash)
-      person_id = SignUpByOauthCommand.run!(auth_hash).person_id
+      person_id = PersonService.sign_up_by_oauth!(auth_hash).person_id
       Person::Person.find(person_id)
     end
     alias_method :sign_up, :oauth_sign_up
