@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-describe SignUpByOauthCommand do
+describe 'Sign up by Oauth' do
   context 'when valid' do
     it do
       auth_hash = mock_auth_hash
 
-      r = described_class.run(auth_hash)
+      r = PersonService.run(auth_hash)
 
       aggregate_failures do
         expect(r).to be_succeeded
@@ -22,7 +22,7 @@ describe SignUpByOauthCommand do
     it do
       auth_hash = mock_auth_hash
 
-      expect { described_class.run(auth_hash) }
+      expect { PersonService.run(auth_hash) }
         .to change { Person::Person.count }.by(1)
         .and change { Person::OauthAccount.count }.by(1)
     end
@@ -31,9 +31,9 @@ describe SignUpByOauthCommand do
   context 'when already signed up' do
     it do
       auth_hash = mock_auth_hash
-      described_class.run(auth_hash)
+      PersonService.run(auth_hash)
 
-      r = described_class.run(auth_hash)
+      r = PersonService.run(auth_hash)
 
       aggregate_failures do
         expect(r).to_not be_succeeded
@@ -42,9 +42,9 @@ describe SignUpByOauthCommand do
 
     it do
       auth_hash = mock_auth_hash
-      described_class.run(auth_hash)
+      PersonService.run(auth_hash)
 
-      expect { described_class.run(auth_hash) }
+      expect { PersonService.run(auth_hash) }
         .to change { Person::Person.count }.by(0)
         .and change { Person::OauthAccount.count }.by(0)
     end

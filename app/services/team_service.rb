@@ -1,4 +1,4 @@
-class LaunchProjectCommand < ApplicationCommand
+class TeamService < ApplicationService
 
   def run(user, params)
     project = Project::Project.launch(user, params.name)

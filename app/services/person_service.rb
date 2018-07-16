@@ -1,4 +1,4 @@
-class SignUpByOauthCommand < ApplicationCommand
+class PersonService < ApplicationService
 
   def run(auth_hash)
     person = new_person(auth_hash)

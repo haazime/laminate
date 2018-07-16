@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-xdescribe LaunchProjectCommand do
+xdescribe 'Launch team' do
   it do
     person = sign_up
 
