@@ -1,5 +1,5 @@
-module App
+module Person
   def self.table_name_prefix
-    'app_'
+    'person_'
   end
 end

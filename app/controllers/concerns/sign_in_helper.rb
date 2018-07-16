@@ -1,27 +1,27 @@
 module SignInHelper
-  KEY = :user_id
+  KEY = :person_id
 
   protected
 
-    def sign_in(user_id)
-      return unless user_id
-      cookies.signed[KEY] = user_id
+    def sign_in(person_id)
+      return unless person_id
+      cookies.signed[KEY] = person_id
     end
 
     def sign_out
       cookies.delete(KEY)
     end
 
-    def current_user
-      @__current_user ||= fetch_user(cookies.signed[KEY])
+    def current_person
+      @__current_person ||= fetch_person(cookies.signed[KEY])
     end
 
     def signed_in?
-      !!current_user
+      !!current_person
     end
 
-    def fetch_user(user_id = nil)
-      return nil unless user_id
-      App::User.find_by(id: user_id)
+    def fetch_person(person_id = nil)
+      return nil unless person_id
+      Person::Person.find_by(id: person_id)
     end
 end

@@ -1,15 +1,15 @@
-module UserGuard
+module SignInGuard
   include SignInHelper
 
   protected
 
-    def require_user
+    def ensure_signed_in
       unless signed_in?
-        redirect_to new_session_url, notice: t('navs.require_user')
+        redirect_to new_session_url, notice: t('navs.ensure_signed_in')
       end
     end
 
-    def require_guest
+    def ensure_signed_out
       if signed_in?
         redirect_to root_url, notice: t('navs.already_signed_in')
       end

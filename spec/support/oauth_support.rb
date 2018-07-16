@@ -7,16 +7,16 @@ module OauthSupport
       OmniAuth.config.add_mock(auth_hash['provider'].to_sym, auth_hash)
     end
 
-    def set_auth_hash_from_user(user)
+    def set_auth_hash_from_person(person)
       set_auth_hash(
-        'provider' => user.oauth_account.provider,
-        'uid' => user.oauth_account.uid
+        'provider' => person.oauth_account.provider,
+        'uid' => person.oauth_account.uid
       )
     end
 
     def oauth_sign_up(auth_hash = mock_auth_hash)
-      user_id = SignUpByOauthCommand.run!(auth_hash).user_id
-      App::User.find(user_id)
+      person_id = SignUpByOauthCommand.run!(auth_hash).person_id
+      Person::Person.find(person_id)
     end
     alias_method :sign_up, :oauth_sign_up
   end
@@ -29,8 +29,8 @@ module OauthSupport
       request_oauth_sign_in
     end
 
-    def sign_in(user)
-      set_auth_hash_from_user(user)
+    def sign_in(person)
+      set_auth_hash_from_person(person)
       request_oauth_sign_in
     end
 
@@ -42,15 +42,15 @@ module OauthSupport
   end
 
   module System
-    def sign_in(user)
-      set_auth_hash_from_user(user)
+    def sign_in(person)
+      set_auth_hash_from_person(person)
       visit new_session_path
       click_on 'Googleでログイン'
-      find('#app_user_menu')
+      find('#app_person_menu')
     end
 
     def sign_out
-      find('#app_user_menu').click
+      find('#app_person_menu').click
       find('#app_sign_out').click
     end
   end
