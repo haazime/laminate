@@ -1,18 +1,18 @@
 class SignUpByOauthCommand < ApplicationCommand
 
   def run(auth_hash)
-    user = new_user(auth_hash)
-    user.save!
+    person = new_person(auth_hash)
+    person.save!
   rescue
     failure
   else
-    success(user_id: user.id)
+    success(person_id: person.id)
   end
 
   private
 
-    def new_user(auth_hash)
-      App::User.new_with_oauth_account(
+    def new_person(auth_hash)
+      Person::Person.new_with_oauth_account(
         {
           name: auth_hash['info']['name'],
           email: auth_hash['info']['email'],

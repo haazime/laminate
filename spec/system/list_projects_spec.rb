@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe 'List projects', type: :system do
   it do
-    user = sign_up
-    sign_in(user)
+    person = sign_up
+    sign_in(person)
 
     visit projects_path
 

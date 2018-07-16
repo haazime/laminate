@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   include SignInHelper
-  include UserGuard
+  include SignInGuard
 
-  helper_method :signed_in?, :current_user
+  helper_method :signed_in?, :current_person
 end
