@@ -5,7 +5,7 @@ describe 'Sign up by Oauth' do
     it do
       auth_hash = mock_auth_hash
 
-      r = PersonService.run(auth_hash)
+      r = PersonService.sign_up_by_oauth(auth_hash)
 
       aggregate_failures do
         expect(r).to be_succeeded
@@ -22,7 +22,7 @@ describe 'Sign up by Oauth' do
     it do
       auth_hash = mock_auth_hash
 
-      expect { PersonService.run(auth_hash) }
+      expect { PersonService.sign_up_by_oauth(auth_hash) }
         .to change { Person::Person.count }.by(1)
         .and change { Person::OauthAccount.count }.by(1)
     end
@@ -31,9 +31,9 @@ describe 'Sign up by Oauth' do
   context 'when already signed up' do
     it do
       auth_hash = mock_auth_hash
-      PersonService.run(auth_hash)
+      PersonService.sign_up_by_oauth(auth_hash)
 
-      r = PersonService.run(auth_hash)
+      r = PersonService.sign_up_by_oauth(auth_hash)
 
       aggregate_failures do
         expect(r).to_not be_succeeded
@@ -42,9 +42,9 @@ describe 'Sign up by Oauth' do
 
     it do
       auth_hash = mock_auth_hash
-      PersonService.run(auth_hash)
+      PersonService.sign_up_by_oauth(auth_hash)
 
-      expect { PersonService.run(auth_hash) }
+      expect { PersonService.sign_up_by_oauth(auth_hash) }
         .to change { Person::Person.count }.by(0)
         .and change { Person::OauthAccount.count }.by(0)
     end

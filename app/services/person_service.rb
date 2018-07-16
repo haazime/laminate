@@ -1,6 +1,6 @@
 class PersonService < ApplicationService
 
-  def run(auth_hash)
+  def sign_up_by_oauth(auth_hash)
     person = new_person(auth_hash)
     person.save!
   rescue
